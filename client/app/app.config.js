@@ -8,10 +8,8 @@ export function routeConfig($urlRouterProvider, $locationProvider, $mdThemingPro
   $locationProvider.html5Mode(true);
 
   var hpeAccentMap = $mdThemingProvider.extendPalette('green', {
-    'A100': '01A982',
     'A200': '01A982',
-    'A400': '01A982',
-    'A700': '01A982',
+    'A700': '1BB18E',
     'contrastDefaultColor': 'light'
   });
 
