@@ -7,12 +7,29 @@ $palette--black: #333333;
 $palette--black: #999999;
 
 .hpe-header {
-  padding: 2em;
-  p {
-    max-width: 700px;
-  }
+  position: relative;
+  padding: 2em 2em 2px 2em;
+  margin-bottom: 200px;
   &--primary {
     background-color: $palette--bg--primary;
     color: #FFF;
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      width: 120%;
+      height: 600px;
+      bottom: -240px;
+      margin-left: -2em;
+      background-color: $palette--bg--primary;
+      transform: rotate(3deg);
+    }
+  }
+  &__content {
+    position: absolute;
+    z-index: 2;
+    p {
+      max-width: 700px;
+    }
   }
 }
