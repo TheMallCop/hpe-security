@@ -1,27 +1,18 @@
-.thing-form {
-  margin: 20px 0;
-}
+// Variables
+$palette--bg: #F5F5F5;
+$palette--bg--primary: #425563;
+$palette--bg--secondary: #614767;
+$palette--accent: #01A982;
+$palette--black: #333333;
+$palette--black: #999999;
 
-#banner {
-  border-bottom: none;
-  margin-top: -20px;
-}
-
-#banner h1 {
-  font-size: 60px;
-  line-height: 1;
-  letter-spacing: -1px;
-}
-
-.hero-unit {
-  position: relative;
-  padding: 30px 15px;
-  color: #F5F5F5;
-  text-align: center;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-  background: #4393B9;
-}
-
-.navbar-text {
-  margin-left: 15px;
+.hpe-header {
+  padding: 2em;
+  p {
+    max-width: 700px;
+  }
+  &--primary {
+    background-color: $palette--bg--primary;
+    color: #FFF;
+  }
 }
