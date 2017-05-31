@@ -8,7 +8,7 @@ $palette--black: #999999;
 
 .hpe-header {
   position: relative;
-  padding: 2em 2em 2px 2em;
+  padding: 3em 3em 3em 3em;
   margin-bottom: 260px;
   &--primary {
     background-color: $palette--bg--primary;
@@ -18,18 +18,25 @@ $palette--black: #999999;
       position: absolute;
       z-index: 1;
       width: 120%;
-      height: 600px;
-      bottom: -240px;
-      margin-left: -2em;
+      height: 620px;
+      bottom: -220px;
+      margin-left: -3em;
       background-color: $palette--bg--primary;
-      transform: rotate(3deg);
+      transform: rotate(2.5deg);
     }
   }
   &__content {
     position: absolute;
     z-index: 2;
+    h1 {
+      font-size: 3em;
+    }
     p {
-      max-width: 700px;
+      font-size: 1.25rem;
+      max-width: 850px;
     }
   }
+}
+.hpe-container {
+  padding: 3em;
 }
