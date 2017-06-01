@@ -11,31 +11,53 @@
     md-mobile-step-text="$ctrl.isMobileStepText" 
     md-vertical="true" 
   >
-    <md-step md-label="Select a campaign">
+    <md-step md-label="Governance">
       <md-step-body>
-        <md-radio-group ng-model="foo">
-          <div>
-            <md-radio-button value="Apple">Apple</md-radio-button>
-            <md-radio-button value="Banana" class="md-accent"> Banana </md-radio-button>
-            <md-radio-button value="Mango">Mango</md-radio-button>
+        <div layout="column">
+          <p flex>
+            Man bun lomo ugh cloud bread meditation, cardigan YOLO 90's literally meh drinking vinegar cliche selfies hashtag. Yuccie williamsburg trust fund pitchfork bicycle rights. Affogato kickstarter williamsburg, fingerstache taxidermy squid literally marfa banh mi. Raclette before they sold out bushwick, wayfarers keffiyeh microdosing pickled franzen roof party iPhone shoreditch VHS. La croix venmo tacos intelligentsia, poutine tofu fanny pack neutra austin authentic live-edge XOXO crucifix.
+          </p>
+          <div flex>
+            <md-radio-group ng-model="foo">
+              <md-radio-button value="Apple">Apple</md-radio-button>
+              <md-radio-button value="Banana" class="md-accent"> Banana </md-radio-button>
+              <md-radio-button value="Mango">Mango</md-radio-button>
+            </md-radio-group>
           </div>
-        </md-radio-group>
+        </div>
       </md-step-body>
       <md-step-actions>
-        <md-button class="md-primary md-raised" ng-click="$ctrl.selectCampaign();">Continue</md-button>
-        <md-button class="md-primary" ng-click="$ctrl.cancel();">Cancel</md-button>
+        <md-button class="md-accent md-raised" ng-click="$ctrl.selectCampaign();">Continue</md-button>
+        <md-button class="md-accent" ng-click="$ctrl.cancel();">Cancel</md-button>
       </md-step-actions>
     </md-step>
-    <md-step md-label="Create an group">
+    <md-step md-label="Construction">
       <md-step-body>
         <p>Step content</p>
       </md-step-body>
       <md-step-actions>
-        <md-button class="md-primary md-raised" ng-click="$ctrl.nextStep();">Continue</md-button>
-        <md-button class="md-primary" ng-click="$ctrl.previousStep();">Back</md-button>
+        <md-button class="md-accent md-raised" ng-click="$ctrl.nextStep();">Continue</md-button>
+        <md-button ng-click="$ctrl.previousStep();">Back</md-button>
       </md-step-actions>
     </md-step>
-    <!-- Other steps if needed ... -->
+    <md-step md-label="Verification">
+      <md-step-body>
+        <p>Step content</p>
+      </md-step-body>
+      <md-step-actions>
+        <md-button class="md-accent md-raised" ng-click="$ctrl.nextStep();">Continue</md-button>
+        <md-button ng-click="$ctrl.previousStep();">Back</md-button>
+      </md-step-actions>
+    </md-step>
+    <md-step md-label="Deployment">
+      <md-step-body>
+        <p>Step content</p>
+      </md-step-body>
+      <md-step-actions>
+        <md-button class="md-accent md-raised" ng-click="$ctrl.nextStep();">Continue</md-button>
+        <md-button ng-click="$ctrl.previousStep();">Back</md-button>
+      </md-step-actions>
+    </md-step>
   </md-stepper>
 </section>
 
