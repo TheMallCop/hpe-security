@@ -7,12 +7,36 @@
 
 <section class="hpe-container">
   <h2>Begin the assessment</h2>
-  <md-button class="md-accent md-raised">Something</md-button>
-  <md-radio-group ng-model="foo">
-    <md-radio-button value="Apple">Apple</md-radio-button>
-    <md-radio-button value="Banana" class="md-accent"> Banana </md-radio-button>
-    <md-radio-button value="Mango">Mango</md-radio-button>
-  </md-radio-group>
+  <md-stepper 
+    md-mobile-step-text="$ctrl.isMobileStepText" 
+    md-vertical="true" 
+  >
+    <md-step md-label="Select a campaign">
+      <md-step-body>
+        <md-radio-group ng-model="foo">
+          <div>
+            <md-radio-button value="Apple">Apple</md-radio-button>
+            <md-radio-button value="Banana" class="md-accent"> Banana </md-radio-button>
+            <md-radio-button value="Mango">Mango</md-radio-button>
+          </div>
+        </md-radio-group>
+      </md-step-body>
+      <md-step-actions>
+        <md-button class="md-primary md-raised" ng-click="$ctrl.selectCampaign();">Continue</md-button>
+        <md-button class="md-primary" ng-click="$ctrl.cancel();">Cancel</md-button>
+      </md-step-actions>
+    </md-step>
+    <md-step md-label="Create an group">
+      <md-step-body>
+        <p>Step content</p>
+      </md-step-body>
+      <md-step-actions>
+        <md-button class="md-primary md-raised" ng-click="$ctrl.nextStep();">Continue</md-button>
+        <md-button class="md-primary" ng-click="$ctrl.previousStep();">Back</md-button>
+      </md-step-actions>
+    </md-step>
+    <!-- Other steps if needed ... -->
+  </md-stepper>
 </section>
 
 <div class="container">

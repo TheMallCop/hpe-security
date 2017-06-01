@@ -5,11 +5,13 @@ import ngAnimate from 'angular-animate';
 import ngCookies from 'angular-cookies';
 import ngResource from 'angular-resource';
 import ngSanitize from 'angular-sanitize';
-
 import uiRouter from 'angular-ui-router';
 
 import ngMessages from 'angular-messages';
 import ngMaterial from 'angular-material';
+import nemLogging from 'angular-simple-logger';
+import mdSteppers from 'material-steppers';
+
 
 
 import {
@@ -24,9 +26,8 @@ import util from '../components/util/util.module';
 
 import './app.scss';
 
-angular.module('hpeSecurityApp', [ngCookies, ngResource, 
-	ngSanitize, uiRouter, ngAnimate, ngMessages, ngMaterial, 
-	constants, util,
+angular.module('hpeSecurityApp', [ngCookies, ngResource, 'nemLogging', 'mdSteppers',
+	ngSanitize, uiRouter, ngAnimate, ngMessages, ngMaterial, constants, util,
 	navbar, footer, main
 ])
   .config(routeConfig);
