@@ -9,7 +9,6 @@ import uiRouter from 'angular-ui-router';
 
 import ngMessages from 'angular-messages';
 import ngMaterial from 'angular-material';
-import nemLogging from 'angular-simple-logger';
 import mdSteppers from 'material-steppers';
 
 
@@ -26,7 +25,7 @@ import util from '../components/util/util.module';
 
 import './app.scss';
 
-angular.module('hpeSecurityApp', [ngCookies, ngResource, 'nemLogging', 'mdSteppers',
+angular.module('hpeSecurityApp', [ngCookies, ngResource, 'mdSteppers',
 	ngSanitize, uiRouter, ngAnimate, ngMessages, ngMaterial, constants, util,
 	navbar, footer, main
 ])

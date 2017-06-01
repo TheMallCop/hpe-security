@@ -175,7 +175,7 @@ md-step-actions {
   z-index: 3;
 }
 .md-stepper-indicator-wrapper {
-  padding: 0 8px 0 0;
+  padding: 0 8px 16px 0;
   position: relative;
   z-index: 2;
   display: -webkit-flex;
@@ -187,7 +187,6 @@ md-step-actions {
   -webkit-align-content: center;
       -ms-flex-line-pack: center;
           align-content: center;
-  background-color: #fff;
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 .md-stepper-number {
