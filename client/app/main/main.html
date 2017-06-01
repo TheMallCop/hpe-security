@@ -8,12 +8,13 @@
 <section class="hpe-container">
   <h2>Begin the assessment</h2>
   <md-stepper 
+    id="hpe-stepper"
     md-mobile-step-text="$ctrl.isMobileStepText" 
     md-vertical="true" 
   >
     <md-step md-label="Governance">
       <md-step-body>
-        <div layout="column">
+        <div class="step-content" layout="column">
           <p flex>
             Man bun lomo ugh cloud bread meditation, cardigan YOLO 90's literally meh drinking vinegar cliche selfies hashtag. Yuccie williamsburg trust fund pitchfork bicycle rights. Affogato kickstarter williamsburg, fingerstache taxidermy squid literally marfa banh mi. Raclette before they sold out bushwick, wayfarers keffiyeh microdosing pickled franzen roof party iPhone shoreditch VHS. La croix venmo tacos intelligentsia, poutine tofu fanny pack neutra austin authentic live-edge XOXO crucifix.
           </p>
@@ -27,8 +28,7 @@
         </div>
       </md-step-body>
       <md-step-actions>
-        <md-button class="md-accent md-raised" ng-click="$ctrl.selectCampaign();">Continue</md-button>
-        <md-button class="md-accent" ng-click="$ctrl.cancel();">Cancel</md-button>
+        <md-button class="md-accent md-raised" ng-click="$ctrl.nextStep();">Continue</md-button>
       </md-step-actions>
     </md-step>
     <md-step md-label="Construction">

@@ -4,18 +4,18 @@ import routing from './main.routes';
 
 export class MainController {
 
-  awesomeThings = [];
-
   /*@ngInject*/
-  constructor($http) {
-    this.$http = $http;
+  constructor($mdStepper) {
+    this.$mdStepper = $mdStepper;
   }
 
   $onInit() {
-    this.$http.get('/api/things')
-      .then(response => {
-        this.awesomeThings = response.data;
-      });
+    this.nextStep = () => {
+      this.$mdStepper('hpe-stepper').next();
+    };
+    this.previousStep = () => {
+      this.$mdStepper('hpe-stepper').back();
+    };
   }
 }
 
@@ -23,6 +23,7 @@ export default angular.module('hpeSecurityApp.main', [uiRouter])
   .config(routing)
   .component('main', {
     template: require('./main.html'),
-    controller: MainController
+    controller: MainController,
+    controllerAs: '$ctrl'
   })
   .name;
