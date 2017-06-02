@@ -18,12 +18,35 @@
           <p flex>
             Man bun lomo ugh cloud bread meditation, cardigan YOLO 90's literally meh drinking vinegar cliche selfies hashtag. Yuccie williamsburg trust fund pitchfork bicycle rights. Affogato kickstarter williamsburg, fingerstache taxidermy squid literally marfa banh mi. Raclette before they sold out bushwick, wayfarers keffiyeh microdosing pickled franzen roof party iPhone shoreditch VHS. La croix venmo tacos intelligentsia, poutine tofu fanny pack neutra austin authentic live-edge XOXO crucifix.
           </p>
-          <div flex>
-            <md-radio-group ng-model="foo">
-              <md-radio-button value="Apple">Apple</md-radio-button>
-              <md-radio-button value="Banana" class="md-accent"> Banana </md-radio-button>
-              <md-radio-button value="Mango">Mango</md-radio-button>
-            </md-radio-group>
+          <div class="questions" layout="row" layout-align="space-between">
+            <div class="questions__text" flex="40">
+              Affogato kickstarter williamsburg, fingerstache taxidermy squid literally marfa banh mi?
+            </div>
+            <div class="options" flex="40" flex-offset="20">
+              <md-radio-group ng-model="foo" layout="row" layout-align="space-between">
+
+                <div class="options__single" layout="column">
+                  <div class="options__number">1</div>
+                  <md-radio-button value="Apple"></md-radio-button>
+                </div>
+
+                <div class="options__single" layout="column">
+                  <div class="options__number">2</div>
+                  <md-radio-button value="Banana"></md-radio-button>
+                </div>
+
+                <div class="options__single" layout="column">
+                  <div class="options__number">3</div>
+                  <md-radio-button value="Mango"></md-radio-button>
+                </div>
+
+                <div class="options__single" layout="column">
+                  <div class="options__number">4</div>
+                  <md-radio-button value="Mango"></md-radio-button>
+                </div>
+
+              </md-radio-group>
+            </div>
           </div>
         </div>
       </md-step-body>
