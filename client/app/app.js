@@ -19,6 +19,7 @@ import {
 
 import navbar from '../components/navbar/navbar.component';
 import footer from '../components/footer/footer.component';
+import question from '../components/question/question.component';
 import main from './main/main.component';
 import constants from './app.constants';
 import util from '../components/util/util.module';
@@ -27,7 +28,7 @@ import './app.scss';
 
 angular.module('hpeSecurityApp', [ngCookies, ngResource, 'mdSteppers',
 	ngSanitize, uiRouter, ngAnimate, ngMessages, ngMaterial, constants, util,
-	navbar, footer, main
+	navbar, footer, question, main
 ])
   .config(routeConfig);
 
