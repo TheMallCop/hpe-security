@@ -6,6 +6,10 @@ $palette--accent: #01A982;
 $palette--black: #333333;
 $palette--black: #999999;
 
+body, .app {
+  background-color: #FFF;
+}
+
 p {
   max-width: 700px;
 }
