@@ -17,7 +17,7 @@ import {
   routeConfig
 } from './app.config';
 
-import navbar from '../components/navbar/navbar.component';
+import header from '../components/header/hpe-header.component';
 import footer from '../components/footer/footer.component';
 import question from '../components/question/question.component';
 import main from './main/main.component';
@@ -28,7 +28,7 @@ import './app.scss';
 
 angular.module('hpeSecurityApp', [ngCookies, ngResource, 'mdSteppers',
 	ngSanitize, uiRouter, ngAnimate, ngMessages, ngMaterial, constants, util,
-	navbar, footer, question, main
+	header, footer, question, main
 ])
   .config(routeConfig);
 

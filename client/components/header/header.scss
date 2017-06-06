@@ -1,0 +1,31 @@
+.hpe-header {
+  position: relative;
+  padding: 3em 3em 3em 3em;
+  margin-bottom: 220px;
+  &--primary {
+    background-color: $palette--bg--primary;
+    color: #FFF;
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      width: 120%;
+      height: 620px;
+      bottom: -220px;
+      margin-left: -3em;
+      background-color: $palette--bg--primary;
+      transform: rotate(2.5deg);
+    }
+  }
+  &__content {
+    position: absolute;
+    z-index: 2;
+    h1 {
+      font-size: 3em;
+    }
+    p {
+      font-size: 1.25rem;
+      max-width: 850px;
+    }
+  }
+}
