@@ -5,6 +5,10 @@ export class QuestionComponent {}
 export default angular.module('directives.question', [])
   .component('question', {
     template: require('./question.html'),
-    controller: QuestionComponent
+    controller: QuestionComponent,
+    bindings: {
+    	questionNumber: '@',
+    	questionText: '@'
+    }
   })
   .name;
