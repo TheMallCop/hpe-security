@@ -3,9 +3,11 @@ $palette--bg: #F5F5F5;
 $palette--bg--primary: #425563;
 $palette--bg--secondary: #614767;
 $palette--accent: #01A982;
-$palette--black: #333333;
+$palette--light-gray: rgba(0, 0, 0, 0.12);
+$palette--gray: #333333;
 $palette--black: #999999;
 $font__weight--bold: 800;
+$rule: thin solid $palette--light-gray;
 
 body, .app {
   background-color: #FFF;

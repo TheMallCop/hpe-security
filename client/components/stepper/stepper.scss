@@ -1,8 +1,16 @@
 .hpe-step {
 	margin-bottom: 2em;
+	&__line {
+		height: 90%;
+		margin: 1em 0.75em;
+    background: $palette--light-gray;
+    width: 1px;
+    position: absolute;
+	}
 	&__body {
 		max-height: 0px;
 		overflow: hidden;
+		margin-left: 2em;
 	}
 	&__body.active {
 		max-height: inherit;
