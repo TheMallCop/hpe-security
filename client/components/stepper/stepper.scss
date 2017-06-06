@@ -1,0 +1,20 @@
+.hpe-steppers {
+	&__label {
+		&__indicator {
+			text-align: center;
+			background-color: $palette--accent;
+			color: #FFF;
+			border-radius: 25px;
+			width: 22px;
+			height: 22px;
+			margin-right: 0.75em;
+			font-size: 0.8em;
+			position: relative;
+			span {
+				position: absolute;
+				top: 0.25em;
+    		left: 0.55em;
+			}
+		}
+	}
+}
