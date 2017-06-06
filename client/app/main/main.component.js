@@ -10,6 +10,7 @@ export class MainController {
   }
 
   $onInit() {
+    this.activeStep = 'Foobar';
     this.nextStep = () => {
       this.$mdStepper('hpe-stepper').next();
     };
