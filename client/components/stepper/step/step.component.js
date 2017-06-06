@@ -5,6 +5,8 @@ export class StepComponent {
 	$onInit() {
 	  if (this.stepperCtrl.activeStep === this.label) {
 	  	this.active = true;
+	  } else {
+	  	this.active = false;
 	  }
 	}
 }

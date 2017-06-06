@@ -1,19 +1,22 @@
 .hpe-step {
 	margin-bottom: 2em;
 	&__line {
-		height: 90%;
-		margin: 1em 0.75em;
+		height: 1em;
+		margin: 0.5em 0.65em;
     background: $palette--light-gray;
     width: 1px;
     position: absolute;
 	}
+	&__line.active {
+		height: 90%;
+	}
 	&__body {
-		max-height: 0px;
+		max-height: 0px !important;
 		overflow: hidden;
 		margin-left: 2em;
 	}
 	&__body.active {
-		max-height: inherit;
+		max-height: inherit !important;
 	}
 	&__label {
 		&__indicator {
