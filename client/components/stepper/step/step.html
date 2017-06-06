@@ -1,12 +1,13 @@
-<div class="hpe-steppers__single"
+<div class="hpe-step"
 >
-  <div class="hpe-steppers__label" layout="row">
-    <div class="hpe-steppers__label__indicator"><span>{{$ctrl.label}}</span></div>
-    <div class="hpe-steppers__label__name">{{$ctrl.name}}</div>
+  <div class="hpe-step__label" layout="row">
+    <div class="hpe-step__label__indicator"><span>{{$ctrl.label}}</span></div>
+    <div class="hpe-step__label__name">{{$ctrl.name}}</div>
   </div>
-  <div class="hpe-steppers__body" ng-transclude>
-  </div>
-  <div class="hpe-steppers__actions">
-    <md-button class="md-accent md-raised" ng-click="$ctrl.nextStep();" aria-label="continue">Continue</md-button>
+  <div class="hpe-step__body" ng-class="{active: $ctrl.active}">
+    <div ng-transclude></div>
+    <div class="hpe-step__actions">
+      <md-button class="md-accent md-raised" ng-click="$ctrl.nextStep();" aria-label="continue">Continue</md-button>
+    </div>
   </div>
 </div>

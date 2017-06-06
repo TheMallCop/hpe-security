@@ -1,4 +1,12 @@
-.hpe-steppers {
+.hpe-step {
+	margin-bottom: 2em;
+	&__body {
+		max-height: 0px;
+		overflow: hidden;
+	}
+	&__body.active {
+		max-height: inherit;
+	}
 	&__label {
 		&__indicator {
 			text-align: center;

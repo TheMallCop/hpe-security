@@ -3,7 +3,9 @@ import angular from 'angular';
 export class StepComponent {
 	// Get the active step
 	$onInit() {
-	  console.log('Step is active?', this.stepperCtrl.activeStep === this.label);
+	  if (this.stepperCtrl.activeStep === this.label) {
+	  	this.active = true;
+	  }
 	}
 }
 
