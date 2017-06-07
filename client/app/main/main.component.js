@@ -4,18 +4,16 @@ import routing from './main.routes';
 
 export class MainController {
 
-  /*@ngInject*/
-  constructor($mdStepper) {
-    this.$mdStepper = $mdStepper;
-  }
-
   $onInit() {
-    this.activeStep = 'Foobar';
+    var steps = ['A', 'B', 'C', 'D'];
+    var stepCounter = 0;
+    this.activeStep = steps[stepCounter];
     this.nextStep = () => {
-      this.$mdStepper('hpe-stepper').next();
+      console.log('Next step!', this.activeStep);
+      stepCounter += 1;
+      this.activeStep = steps[stepCounter]; 
     };
     this.previousStep = () => {
-      this.$mdStepper('hpe-stepper').back();
     };
   }
 }
