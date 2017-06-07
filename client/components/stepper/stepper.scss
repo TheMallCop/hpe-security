@@ -10,16 +10,18 @@
 	&__line.active {
 		height: 90%;
 	}
-	&__line.last {
+	&__line.last:not(.active) {
 		background-color: transparent;
 	}
 	&__body {
 		max-height: 0px !important;
+    @include quint-ease-out(max-height, 600ms);
 		overflow: hidden;
 		margin-left: 2em;
 	}
 	&__body.active {
-		max-height: inherit !important;
+		max-height: 1000px !important;
+    @include quint-ease-out(max-height, 800ms);
 	}
 	&__label {
 		&__indicator {

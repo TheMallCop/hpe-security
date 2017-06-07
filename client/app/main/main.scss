@@ -9,6 +9,19 @@ $palette--black: #999999;
 $font__weight--bold: 800;
 $rule: thin solid $palette--light-gray;
 
+// Animation
+
+@mixin quint-ease-out($target: all, $duration: 400ms, $target2: false, $duration2: 400ms) {
+  @if $target2 == false {
+    transition: $target $duration cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  @else {
+    transition: $target $duration cubic-bezier(0.23, 1, 0.32, 1), $target2 $duration2 cubic-bezier(0.23, 1, 0.32, 1);
+  }
+}
+
+// Main styles
+
 body, .app {
   background-color: #FFF;
 }
