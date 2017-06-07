@@ -6,16 +6,9 @@ import ngCookies from 'angular-cookies';
 import ngResource from 'angular-resource';
 import ngSanitize from 'angular-sanitize';
 import uiRouter from 'angular-ui-router';
-
 import ngMessages from 'angular-messages';
 import ngMaterial from 'angular-material';
-import mdSteppers from 'material-steppers';
-
-
-
-import {
-  routeConfig
-} from './app.config';
+import {routeConfig} from './app.config';
 
 import main from './main/main.component';
 import constants from './app.constants';
@@ -28,8 +21,8 @@ import step from '../components/stepper/step/step.component';
 
 import './app.scss';
 
-angular.module('hpeSecurityApp', [ngCookies, ngResource, 'mdSteppers',
-	ngSanitize, uiRouter, ngAnimate, ngMessages, ngMaterial, constants, util,
+angular.module('hpeSecurityApp', [ngCookies, ngResource, ngSanitize, 
+	uiRouter, ngAnimate, ngMessages, ngMaterial, constants, util,
 	main, header, footer, question, stepper, step
 ])
   .config(routeConfig);
