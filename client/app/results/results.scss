@@ -10,3 +10,9 @@ md-slider[disabled][readonly] .md-sign {
   	border-top-color: $palette--accent;
   }
 }
+.results-breakdown {
+	margin-top: 4em;
+	&__section {
+		margin-bottom: 4em;
+	}
+}
