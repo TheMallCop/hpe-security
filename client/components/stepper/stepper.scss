@@ -17,11 +17,14 @@
 		max-height: 0px !important;
     @include quint-ease-out(max-height, 600ms);
 		overflow: hidden;
-		margin-left: 2em;
+		margin-left: 1em;
 	}
 	&__body.active {
 		max-height: 1000px !important;
     @include quint-ease-out(max-height, 800ms);
+    .md-button {
+    	margin-left: 0;
+    }
 	}
 	&__label {
 		&__indicator {
@@ -48,9 +51,9 @@
 		&__name {
 			padding-top: 0.15em;
 			color: $palette--gray;
+			font-weight: $font__weight--bold;
 			&.active {
 				color: $palette--black;
-				font-weight: $font__weight--bold;
 			}
 		}
 	}
