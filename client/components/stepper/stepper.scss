@@ -1,3 +1,6 @@
+.hpe-stepper {
+	margin-top: 2em;
+}
 .hpe-step {
 	margin-bottom: 2em;
 	&__line {
@@ -17,7 +20,7 @@
 		max-height: 0px !important;
     @include quint-ease-out(max-height, 600ms);
 		overflow: hidden;
-		margin-left: 1em;
+		margin-left: 2em;
 	}
 	&__body.active {
 		max-height: 1000px !important;

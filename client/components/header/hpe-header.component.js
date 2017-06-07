@@ -15,6 +15,7 @@ export class HeaderComponent {
 export default angular.module('directives.hpeHeader', [])
   .component('hpeHeader', {
     template: require('./hpe-header.html'),
-    controller: HeaderComponent
+    controller: HeaderComponent,
+    transclude: true
   })
   .name;

@@ -1,0 +1,12 @@
+md-slider[md-discrete] .md-sign,
+md-slider[md-discrete] .md-sign:after {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0) scale(1);
+  transform: translate3d(0, 0, 0) scale(1);
+}
+md-slider[disabled][readonly] .md-sign {
+  background-color: $palette--accent;
+  &::after {
+  	border-top-color: $palette--accent;
+  }
+}

@@ -11,6 +11,7 @@ import ngMaterial from 'angular-material';
 import {routeConfig} from './app.config';
 
 import main from './main/main.component';
+import results from './results/results.component';
 import constants from './app.constants';
 import util from '../components/util/util.module';
 import header from '../components/header/hpe-header.component';
@@ -23,7 +24,7 @@ import './app.scss';
 
 angular.module('hpeSecurityApp', [ngCookies, ngResource, ngSanitize, 
 	uiRouter, ngAnimate, ngMessages, ngMaterial, constants, util,
-	main, header, footer, question, stepper, step
+	main, results, header, footer, question, stepper, step
 ])
   .config(routeConfig);
 
