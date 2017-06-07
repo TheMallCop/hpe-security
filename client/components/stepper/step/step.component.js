@@ -8,6 +8,12 @@ export class StepComponent {
 	  } else {
 	  	this.active = false;
 	  }
+	  if (this.stepperCtrl.completedSteps.includes(this.label)) {
+	  	this.complete = true;
+	  } else {
+	  	this.complete = false;
+	  }
+	  console.log('Completed steps', this.stepperCtrl.completedSteps);
 	}
 }
 

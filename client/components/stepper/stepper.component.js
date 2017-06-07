@@ -8,7 +8,8 @@ export default angular.module('directives.stepper', [])
     controller: StepperComponent,
     transclude: true,
     bindings: {
-    	activeStep: '@'
+    	activeStep: '@',
+    	completedSteps: '@'
     }
   })
   .name;

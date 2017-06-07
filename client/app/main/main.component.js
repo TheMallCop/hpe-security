@@ -7,13 +7,15 @@ export class MainController {
   $onInit() {
     var steps = ['A', 'B', 'C', 'D'];
     var stepCounter = 0;
+    this.completedSteps = [];
     this.activeStep = steps[stepCounter];
     this.nextStep = () => {
-      console.log('Next step!', this.activeStep);
+      this.completedSteps.push(this.activeStep);
       stepCounter += 1;
       this.activeStep = steps[stepCounter]; 
     };
     this.previousStep = () => {
+      this.completedSteps.pop();
       stepCounter -= 1;
       this.activeStep = steps[stepCounter]; 
     };
