@@ -2,7 +2,7 @@
 <section class="hpe-container">
   <h2>Begin the assessment</h2>
   <stepper active-step="{{$ctrl.activeStep}}">
-    <step name="Construction" label="A">
+    <step name="Governance" label="A">
       <div class="step-content" layout="column">
         <p flex>
           Man bun lomo ugh cloud bread meditation, cardigan YOLO 90's literally meh drinking vinegar cliche selfies hashtag. Yuccie williamsburg trust fund pitchfork bicycle rights. Affogato kickstarter williamsburg, fingerstache taxidermy squid literally marfa banh mi. Raclette before they sold out bushwick, wayfarers keffiyeh microdosing pickled franzen roof party iPhone shoreditch VHS. La croix venmo tacos intelligentsia, poutine tofu fanny pack neutra austin authentic live-edge XOXO crucifix.
@@ -25,7 +25,7 @@
         </div>
       </div>
     </step>
-    <step name="Governance" label="B">
+    <step name="Construction" label="B">
       <div class="step-content" layout="column">
         <p flex>
           Man bun lomo ugh cloud bread meditation, cardigan YOLO 90's literally meh drinking vinegar cliche selfies hashtag. Yuccie williamsburg trust fund pitchfork bicycle rights. Affogato kickstarter williamsburg, fingerstache taxidermy squid literally marfa banh mi. Raclette before they sold out bushwick, wayfarers keffiyeh microdosing pickled franzen roof party iPhone shoreditch VHS. La croix venmo tacos intelligentsia, poutine tofu fanny pack neutra austin authentic live-edge XOXO crucifix.
@@ -45,6 +45,55 @@
         <question question-number="3" question-text="Affogato kickstarter williamsburg, fingerstache taxidermy squid literally marfa banh mi?"></question>
         <div class="hpe-step__actions">
           <md-button class="md-accent md-raised" ng-click="$ctrl.nextStep();" aria-label="continue">Continue</md-button>
+          <md-button ng-click="$ctrl.previousStep();" aria-label="continue">Back</md-button>
+        </div>
+      </div>
+    </step>
+    <step name="Verification" label="C">
+      <div class="step-content" layout="column">
+        <p flex>
+          Man bun lomo ugh cloud bread meditation, cardigan YOLO 90's literally meh drinking vinegar cliche selfies hashtag. Yuccie williamsburg trust fund pitchfork bicycle rights. Affogato kickstarter williamsburg, fingerstache taxidermy squid literally marfa banh mi. Raclette before they sold out bushwick, wayfarers keffiyeh microdosing pickled franzen roof party iPhone shoreditch VHS. La croix venmo tacos intelligentsia, poutine tofu fanny pack neutra austin authentic live-edge XOXO crucifix.
+        </p>
+        <div layout="row">
+          <div class="options__labels" layout="row" layout-align="space-between" flex flex-offset="50">
+            <div>
+              <strong>Never/Not started</strong>
+            </div>
+            <div>
+              <strong>Always/Complete</strong>
+            </div>
+          </div>
+        </div>
+        <question question-number="1" question-text="Affogato kickstarter williamsburg, fingerstache taxidermy squid literally marfa banh mi?"></question>
+        <question question-number="2" question-text="Affogato kickstarter williamsburg, fingerstache taxidermy squid literally marfa banh mi?"></question>
+        <question question-number="3" question-text="Affogato kickstarter williamsburg, fingerstache taxidermy squid literally marfa banh mi?"></question>
+        <div class="hpe-step__actions">
+          <md-button class="md-accent md-raised" ng-click="$ctrl.nextStep();" aria-label="continue">Continue</md-button>
+          <md-button ng-click="$ctrl.previousStep();" aria-label="continue">Back</md-button>
+        </div>
+      </div>
+    </step>
+    <step name="Deployment" label="D">
+      <div class="step-content" layout="column">
+        <p flex>
+          Man bun lomo ugh cloud bread meditation, cardigan YOLO 90's literally meh drinking vinegar cliche selfies hashtag. Yuccie williamsburg trust fund pitchfork bicycle rights. Affogato kickstarter williamsburg, fingerstache taxidermy squid literally marfa banh mi. Raclette before they sold out bushwick, wayfarers keffiyeh microdosing pickled franzen roof party iPhone shoreditch VHS. La croix venmo tacos intelligentsia, poutine tofu fanny pack neutra austin authentic live-edge XOXO crucifix.
+        </p>
+        <div layout="row">
+          <div class="options__labels" layout="row" layout-align="space-between" flex flex-offset="50">
+            <div>
+              <strong>Never/Not started</strong>
+            </div>
+            <div>
+              <strong>Always/Complete</strong>
+            </div>
+          </div>
+        </div>
+        <question question-number="1" question-text="Affogato kickstarter williamsburg, fingerstache taxidermy squid literally marfa banh mi?"></question>
+        <question question-number="2" question-text="Affogato kickstarter williamsburg, fingerstache taxidermy squid literally marfa banh mi?"></question>
+        <question question-number="3" question-text="Affogato kickstarter williamsburg, fingerstache taxidermy squid literally marfa banh mi?"></question>
+        <div class="hpe-step__actions">
+          <md-button class="md-accent md-raised" ng-click="$ctrl.complete();" aria-label="continue">Complete</md-button>
+          <md-button ng-click="$ctrl.previousStep();" aria-label="continue">Back</md-button>
         </div>
       </div>
     </step>

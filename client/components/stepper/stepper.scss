@@ -10,6 +10,9 @@
 	&__line.active {
 		height: 90%;
 	}
+	&__line.last {
+		background-color: transparent;
+	}
 	&__body {
 		max-height: 0px !important;
 		overflow: hidden;

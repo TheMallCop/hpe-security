@@ -4,7 +4,7 @@
     <div class="hpe-step__label__name">{{$ctrl.name}}</div>
   </div>
   <div layout="row">
-    <div class="hpe-step__line" flex="5"  ng-class="{active: $ctrl.active}"></div>
+    <div class="hpe-step__line" flex="5"  ng-class="{active: $ctrl.active, 'last': $ctrl.label === 'D'}"></div>
     <div class="hpe-step__body" flex="95" ng-class="{active: $ctrl.active}">
       <div ng-transclude></div>
     </div>

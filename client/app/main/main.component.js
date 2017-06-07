@@ -14,6 +14,8 @@ export class MainController {
       this.activeStep = steps[stepCounter]; 
     };
     this.previousStep = () => {
+      stepCounter -= 1;
+      this.activeStep = steps[stepCounter]; 
     };
   }
 }
