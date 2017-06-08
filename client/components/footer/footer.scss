@@ -10,6 +10,13 @@
       font-size: 1.4em;
       font-weight: $font__weight--bold;
       margin-bottom: 0;
+      a {
+        color: #FFF;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
     p {
       margin-top: 0.5em;
