@@ -13,7 +13,6 @@ export class StepComponent {
 	  } else {
 	  	this.complete = false;
 	  }
-	  console.log('Completed steps', this.stepperCtrl.completedSteps);
 	}
 }
 
