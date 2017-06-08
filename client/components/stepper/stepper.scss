@@ -25,9 +25,6 @@
 	&__body.active {
 		max-height: 1000px !important;
     @include quint-ease-out(max-height, 800ms);
-    .md-button {
-    	margin-left: 0;
-    }
 	}
 	&__label {
 		&__indicator {

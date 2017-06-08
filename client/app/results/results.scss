@@ -14,5 +14,21 @@ md-slider[disabled][readonly] .md-sign {
 	margin-top: 4em;
 	&__section {
 		margin-bottom: 4em;
+    &:last-of-type {
+      margin-bottom: 1em;
+    }
+    h3 {
+      margin-bottom: 0.25em;
+    }
 	}
+}
+.slider {
+  margin-top: 2em;
+  &__label {
+    font-weight: $font__weight--bold;
+    color: $palette--gray;
+    &__max {
+      text-align: right;
+    }
+  }
 }
