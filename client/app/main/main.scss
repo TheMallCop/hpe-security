@@ -32,15 +32,26 @@ p {
 .hpe-container {
   padding: 3em;
 }
-md-slider[md-discrete] .md-sign,
-md-slider[md-discrete] .md-sign:after {
-  opacity: 1;
-  -webkit-transform: translate3d(0, 0, 0) scale(1);
-  transform: translate3d(0, 0, 0) scale(1);
-}
-md-slider[disabled][readonly] .md-sign {
+.hpe-icon {
   background-color: $palette--accent;
-  &::after {
-  	border-top-color: $palette--accent;
+  color: #FFFFFF;
+  width: 20px;
+  height: 20px;
+  border-radius: 25px;
+  position: relative;
+  top: 0.2rem;
+  &--button {
+    top: 0.3rem;
+    margin-right: 0.25rem;
+    &::before {
+      top: 6px !important;
+      left: 5px !important;
+    }
+  }
+  &::before {
+    font-size: 0.7rem;
+    position: absolute;
+    top: 5px;
+    left: 6px;
   }
 }

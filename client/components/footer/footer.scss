@@ -1,0 +1,18 @@
+.hpe-footer {
+  @extend .hpe-header;
+  @extend .hpe-header--primary;
+  &__content {
+    @extend .hpe-header__content;
+    h2 {
+      font-size: 2.6em;
+    }
+    h4 {
+      font-size: 1.4em;
+      font-weight: $font__weight--bold;
+      margin-bottom: 0;
+    }
+    p {
+      margin-top: 0.5em;
+    }
+  }
+}

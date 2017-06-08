@@ -26,6 +26,7 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 /* inject:scss */
 @import 'main/main';
 @import 'results/results';
+@import '../components/footer/footer';
 @import '../components/header/header';
 @import '../components/question/question';
 @import '../components/stepper/stepper';
