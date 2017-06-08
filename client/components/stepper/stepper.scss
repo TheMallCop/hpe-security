@@ -2,28 +2,27 @@
 	margin-top: 2em;
 }
 .hpe-step {
-	margin-bottom: 2em;
 	&__line {
-		height: 25px;
-		margin: 10px;
-    background: $palette--light-gray;
-    width: 1px;
-    position: absolute;
+		height: 30px;
+		margin: 10px 10px 5px;
+    border-left: thin solid $palette--light-gray;
+    position: relative;
 	}
 	&__line.active {
-		height: 100%;
+		height: auto;
 	}
 	&__line.last:not(.active) {
-		background-color: transparent;
+		border-left: none;
 	}
 	&__body {
 		max-height: 0px !important;
     @include quint-ease-out(max-height, 600ms);
 		overflow: hidden;
-		margin-left: 2em;
+		margin-left: -2em;
+		margin-bottom: 1em;
 	}
 	&__body.active {
-		max-height: 1000px !important;
+		max-height: 2000px !important;
     @include quint-ease-out(max-height, 800ms);
 	}
 	&__label {
