@@ -40,6 +40,7 @@
 			margin-right: 0.75em;
 			font-size: 0.8em;
 			position: relative;
+			top: 0.5em;
 			span {
 				position: absolute;
 				top: 0.25em;
@@ -53,8 +54,8 @@
 		}
 		&__name {
 			padding-top: 0.15em;
+			margin: 0;
 			color: $palette--gray;
-			font-weight: $font__weight--bold;
 			&.active {
 				color: $palette--black;
 			}

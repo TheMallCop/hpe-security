@@ -6,7 +6,7 @@ $palette--accent: #01A982;
 $palette--light-gray: #CCCCCC;
 $palette--black: #333333;
 $palette--gray: #999999;
-$font__weight--bold: 800;
+$font__weight--bold: 700;
 $rule: thin solid $palette--light-gray;
 
 // Animation
@@ -21,11 +21,29 @@ $rule: thin solid $palette--light-gray;
 }
 
 // Main styles
-
+body {
+  font-family: 'metric';
+  font-size: 18px;
+}
 body, .app {
   background-color: #FFF;
 }
-
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.3em;
+}
+h4 {
+  font-size: 1.15em;
+  font-weight: $font__weight--bold;
+}
+.md-button {
+  font-weight: $font__weight--bold;
+}
+.md-button.md-raised.md-raised {
+  color: #FFF;
+}
 p {
   max-width: 700px;
 }
