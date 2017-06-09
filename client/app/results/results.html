@@ -83,10 +83,10 @@
     <h2>Download the full PDF report</h2>
     <p class="intro-text">Chicharrones YOLO before they sold out fanny pack, beard tousled DIY pour-over thundercats blue bottle enamel pin semiotics af tattooed knausgaard.</p>
     <div layout="row" layout-align="center">
-      <md-card flex="60">
+      <md-card flex flex-gt-sm="60">
         <md-card-content>
-          <h3>Register with HPE</h3>
-          <div ng-form="registrationForm" layout="column">
+          <h3 class="hpe-form__title">Register with HPE</h3>
+          <div ng-form="registrationForm" layout="column" class="hpe-form">
             <md-input-container>
               <label>First name</label>
               <input type="text" aria-label="First name" ng-model="firstName">
@@ -99,7 +99,7 @@
               <label>Email</label>
               <input type="email" aria-label="Email" ng-model="email">
             </md-input-container>
-            <div class="form__action">
+            <div class="hpe-form__action">
               <md-button class="md-raised md-accent">Download</md-button>
             </div>
           </div>

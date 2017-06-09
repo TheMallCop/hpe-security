@@ -46,11 +46,22 @@ md-slider[disabled][readonly] .md-sign {
     width: 120%;
     height: 200px;
     margin-top: -100px;
-    margin-left: -100px;
     background-color: white;
     transform: rotate(2.5deg);
   }
   .hpe-container {
     padding-top: 150px;
+  }
+  .hpe-form {
+    @media screen and (min-width: 768px) {
+      max-width: 500px;
+      margin: auto;
+    }
+    &__title {
+      text-align: center;
+    }
+    &__action {
+      text-align: center;
+    }
   }
 }
