@@ -8,11 +8,11 @@
   <div class="results-breakdown">
     <div class="results-breakdown__section">
       <h3>Governance</h3>
-      <div layout="row">
+      <div layout-gt-sm="row" layout="column">
         <div flex="40">
           <p>Summary results indicate a relatively new maturity level when it comes to the focus area of Strategy and Metrics.</p>
         </div>
-        <div flex="40" flex-offset="10" class="slider">
+        <div flex flex-gt-sm="40" flex-offset-gt-sm="10" class="slider">
           <md-slider-container>
             <md-slider ng-model="$ctrl.sliderScores.governance" step="1" max="10" aria-label="Governance" ng-readonly="$ctrl.readOnly" md-discrete ng-disabled="true"></md-slider>
           </md-slider-container>
@@ -25,11 +25,11 @@
     </div>
     <div class="results-breakdown__section">
       <h3>Construction</h3>
-      <div layout="row">
+      <div layout-gt-sm="row" layout="column">
         <div flex="40">
           <p>A relatively new maturity level in modeling application security threats</p>
         </div>
-        <div flex="40" flex-offset="10" class="slider">
+        <div flex flex-gt-sm="40" flex-offset-gt-sm="10" class="slider">
           <md-slider-container>
             <md-slider ng-model="$ctrl.sliderScores.construction" step="1" max="10" aria-label="Construction" ng-readonly="$ctrl.readOnly" md-discrete ng-disabled="true"></md-slider>
           </md-slider-container>
@@ -42,11 +42,11 @@
     </div>
     <div class="results-breakdown__section">
       <h3>Verification</h3>
-      <div layout="row">
+      <div layout-gt-sm="row" layout="column">
         <div flex="40">
           <p>Across a sample of "big picture" security activities in development, your answers suggest a relatively low maturity level in the area of strategy and planning.</p>
         </div>
-        <div flex="40" flex-offset="10" class="slider">
+        <div flex flex-gt-sm="40" flex-offset-gt-sm="10" class="slider">
           <md-slider-container>
             <md-slider ng-model="$ctrl.sliderScores.verification" step="1" max="10" aria-label="Verification" ng-readonly="$ctrl.readOnly" md-discrete ng-disabled="true"></md-slider>
           </md-slider-container>
@@ -59,11 +59,11 @@
     </div>
     <div class="results-breakdown__section">
       <h3>Deployment</h3>
-      <div layout="row">
+      <div layout-gt-sm="row" layout="column">
         <div flex="40">
           <p>A relatively low level of maturity in the processes around Operational Enablement and Environment Hardening</p>
         </div>
-        <div flex="40" flex-offset="10" class="slider">
+        <div flex flex-gt-sm="40" flex-offset-gt-sm="10" class="slider">
           <md-slider-container>
             <md-slider ng-model="$ctrl.sliderScores.deployment" step="1" max="10" aria-label="Deployment" ng-readonly="$ctrl.readOnly" md-discrete ng-disabled="true"></md-slider>
           </md-slider-container>
