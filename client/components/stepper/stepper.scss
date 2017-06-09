@@ -18,8 +18,10 @@
 		max-height: 0px !important;
     @include quint-ease-out(max-height, 600ms);
 		overflow: hidden;
-		margin-left: -2em;
 		margin-bottom: 1em;
+		@media screen and (min-width: 1000px) {
+			margin-left: -2em;    
+  	}
 	}
 	&__body.active {
 		max-height: 2000px !important;
