@@ -24,7 +24,7 @@
   	}
 	}
 	&__body.active {
-		max-height: 2000px !important;
+		max-height: 3000px !important;
     @include quint-ease-out(max-height, 800ms);
 	}
 	&__label {
