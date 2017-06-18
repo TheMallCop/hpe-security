@@ -9,7 +9,8 @@ export default angular.module('directives.stepper', [])
     transclude: true,
     bindings: {
     	activeStep: '@',
-    	completedSteps: '@'
+    	completedSteps: '@',
+      steps: '='
     }
   })
   .name;

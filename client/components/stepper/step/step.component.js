@@ -1,6 +1,9 @@
 import angular from 'angular';
 
 export class StepComponent {
+	$onInit() {
+		this.lastStep = this.stepperCtrl.steps[this.stepperCtrl.steps.length - 1];
+	}
 	// Get the active step
 	$doCheck() {
 	  if (this.stepperCtrl.activeStep === this.label) {

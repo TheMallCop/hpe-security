@@ -5,19 +5,19 @@ import routing from './main.routes';
 export class MainController {
 
   $onInit() {
-    var steps = ['A', 'B', 'C', 'D'];
+    this.steps = ['A', 'B', 'C', 'D'];
     var stepCounter = 0;
     this.completedSteps = [];
-    this.activeStep = steps[stepCounter];
+    this.activeStep = this.steps[stepCounter];
     this.nextStep = () => {
       this.completedSteps.push(this.activeStep);
       stepCounter += 1;
-      this.activeStep = steps[stepCounter]; 
+      this.activeStep = this.steps[stepCounter]; 
     };
     this.previousStep = () => {
       this.completedSteps.pop();
       stepCounter -= 1;
-      this.activeStep = steps[stepCounter]; 
+      this.activeStep = this.steps[stepCounter]; 
     };
     this.questions = {
       sectionA: [
