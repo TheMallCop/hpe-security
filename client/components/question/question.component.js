@@ -3,6 +3,9 @@ import angular from 'angular';
 export class QuestionComponent {
 	$onInit() {
 		this.model = {};
+		this.updateCtrl = (index) => {
+			this.sectionResponses[index].responded = true;
+		}
 	}
 }
 
@@ -14,7 +17,8 @@ export default angular.module('directives.question', [])
     	questionNumber: '@',
     	questionText: '@',
     	dbEntity: '@',
-    	analyticsName: '@'
+    	analyticsName: '@',
+    	sectionResponses: '='
     }
   })
   .name;
