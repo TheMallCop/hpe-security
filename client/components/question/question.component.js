@@ -3,8 +3,8 @@ import angular from 'angular';
 export class QuestionComponent {
 	$onInit() {
 		this.model = {};
-		this.updateCtrl = (index) => {
-			this.sectionResponses[index].responded = true;
+		this.updateCtrl = (sectionIndex) => {
+			this.sectionResponses[sectionIndex].responded = true;
 		}
 	}
 }
@@ -18,7 +18,8 @@ export default angular.module('directives.question', [])
     	questionText: '@',
     	dbEntity: '@',
     	analyticsName: '@',
-    	sectionResponses: '='
+    	sectionResponses: '=',
+    	sectionIndex: '@'
     }
   })
   .name;
