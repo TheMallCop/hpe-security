@@ -10,7 +10,7 @@ export class ResultsController {
       verification: 5,
       deployment: 10,
 
-    }
+    };
     this.readOnly = true;
   }
 }
