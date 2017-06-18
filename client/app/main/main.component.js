@@ -62,9 +62,87 @@ export class MainController {
           dbEntity: 'hpeQuestion8',
           analyticsName: 'Question 8'
         }
+      ], 
+      sectionB: [
+        {
+          number: 9,
+          content: 'Secure frameworks and design features are considered during the design process',
+          dbEntity: 'hpeQuestion9',
+          analyticsName: 'Question 9'
+        }, {
+          number: 10,
+          content: 'We have a documented process track use of open source components and verify their security',
+          dbEntity: 'hpeQuestion10',
+          analyticsName: 'Question 10'
+        }, {
+          number: 11,
+          content: 'Development teams follow secure coding practices',
+          dbEntity: 'hpeQuestion11',
+          analyticsName: 'Question 11'
+        }, {
+          number: 12,
+          content: 'Threat models are built and maintained on a per-application basis',
+          dbEntity: 'hpeQuestion12',
+          analyticsName: 'Question 12'
+        }
+      ], 
+      sectionC: [
+        {
+          number: 13,
+          content: 'We conduct regular secure code reviews',
+          dbEntity: 'hpeQuestion13',
+          analyticsName: 'Question 13'
+        }, {
+          number: 14,
+          content: 'We conduct secure design reviews for new projects',
+          dbEntity: 'hpeQuestion14',
+          analyticsName: 'Question 14'
+        }, {
+          number: 15,
+          content: 'Software architects are involved in the secure design reviews',
+          dbEntity: 'hpeQuestion15',
+          analyticsName: 'Question 15'
+        }, {
+          number: 16,
+          content: 'We have an established security checkpoint and stakeholders are involved in go/no go decision before application goes into production',
+          dbEntity: 'hpeQuestion16',
+          analyticsName: 'Question 16'
+        }, {
+          number: 17,
+          content: 'Stakeholders regularly review the results or metrics from the security code review activities',
+          dbEntity: 'hpeQuestion17',
+          analyticsName: 'Question 17'
+        }, {
+          number: 18,
+          content: 'Development teams regularly  perform source code analysis as part of their workflow',
+          dbEntity: 'hpeQuestion18',
+          analyticsName: 'Question 18'
+        }, {
+          number: 19,
+          content: 'We perform penetration tests on software releases',
+          dbEntity: 'hpeQuestion19',
+          analyticsName: 'Question 19'
+        }
+      ], 
+      sectionD: [
+        {
+          number: 20,
+          content: 'In addition to our app security testing program, we wrap additional protection around  high-risk applications',
+          dbEntity: 'hpeQuestion20',
+          analyticsName: 'Question 20'
+        }, {
+          number: 21,
+          content: 'We monitor applications running in production to collect and respond to threat intelligence',
+          dbEntity: 'hpeQuestion21',
+          analyticsName: 'Question 21'
+        }, {
+          number: 22,
+          content: 'We have a complete feedback loop to share incidents and identified vulnerabilitiy information back to development and design teams',
+          dbEntity: 'hpeQuestion22',
+          analyticsName: 'Question 22'
+        }
       ]
     };
-    // class="regInput microToolInput" data-dbentity=”numSysAdmins” data-analyticsname=”Number of System Administrators”
   }
 }
 
