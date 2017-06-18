@@ -3,6 +3,10 @@
 	margin-bottom: 2em;
 	&__text {
 		padding-top: 1em;
+		&__number {
+			margin-right: 0.5em;
+			font-weight: $font__weight--bold;
+		}
 	}
 }
 .options {

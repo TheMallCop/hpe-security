@@ -1,6 +1,7 @@
 <div layout-gt-sm="row" layout="column" class="questions" layout-align="space-between">
-  <div class="questions__text" flex="40">
-    {{$ctrl.questionNumber}}. {{$ctrl.questionText}}
+  <div class="questions__text" flex="40" layout="row">
+    <div flex="nogrow" class="questions__text__number">{{$ctrl.questionNumber}}.</div>
+    <div flex="nogrow">{{$ctrl.questionText}}</div>
   </div>
   <div class="options" flex="50" flex-offset-gt-sm="10">
     <md-radio-group ng-model="foo" layout="row" layout-align="space-between">
