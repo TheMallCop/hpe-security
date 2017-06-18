@@ -1,6 +1,10 @@
 import angular from 'angular';
 
-export class QuestionComponent {}
+export class QuestionComponent {
+	$onInit() {
+		this.model = {};
+	}
+}
 
 export default angular.module('directives.question', [])
   .component('question', {
@@ -8,7 +12,9 @@ export default angular.module('directives.question', [])
     controller: QuestionComponent,
     bindings: {
     	questionNumber: '@',
-    	questionText: '@'
+    	questionText: '@',
+    	dbEntity: '@',
+    	analyticsName: '@'
     }
   })
   .name;

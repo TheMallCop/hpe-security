@@ -20,15 +20,8 @@
             </div>
           </div>
         </div>
-        <question question-number="1" question-text="We have completed an inventory of our software portfolio (including in-house development, COTS, third-party development, etc.)"></question>
-        <question question-number="2" question-text="Applications in our portoflio have been classified according to data type"></question>
-        <question question-number="3" question-text="We have completed a risk exposure anlaysis of our business critical applications"></question>
-        <div class="hpe-step__actions">
-        <question question-number="4" question-text="Our security goals are documented and communciated to stakeholders"></question>
-        <question question-number="5" question-text="There is a specific group/team that is responsible  for Appsec"></question>
-        <question question-number="6" question-text="We have documented and communicated secure coding standards to everyone involved in software development"></question>
-        <question question-number="7" question-text="Our software suppliers and development partners are required to find and fix security vulnerabilities"></question>
-        <question question-number="8" question-text="We have a role-based security education program in place  to support application security awareness"></question>
+        <question ng-repeat="question in $ctrl.questions.sectionA" question-number="{{question.number}}" question-text="{{question.content}}" db-entity="{{question.dbEntity}}" analytics-name="{{question.analyticsName}}"></question>
+        <div>
           <md-button class="md-accent md-raised" ng-click="$ctrl.nextStep();" aria-label="continue">Continue</md-button>
         </div>
       </div>
@@ -53,9 +46,8 @@
         <question question-number="11" question-text="Development teams follow secure coding practices"></question>
         <question question-number="12" question-text="Threat models are built and maintained on a per-application basis"></question>
         <div class="hpe-step__actions">
-          <md-button class="md-accent md-raised" ng-click="$ctrl.nextStep();" aria-label="continue">Continue</md-button>
-          <md-button ng-click="$ctrl.previousStep();" aria-label="continue">Back</md-button>
-        </div>
+        <md-button class="md-accent md-raised" ng-click="$ctrl.nextStep();" aria-label="continue">Continue</md-button>
+        <md-button ng-click="$ctrl.previousStep();" aria-label="continue">Back</md-button>
       </div>
     </step>
     <step name="Verification" label="C">
@@ -81,9 +73,8 @@
         <question question-number="18" question-text="Development teams regularly  perform source code analysis as part of their workflow"></question>
         <question question-number="19" question-text="We perform penetration tests on software releases"></question>
         <div class="hpe-step__actions">
-          <md-button class="md-accent md-raised" ng-click="$ctrl.nextStep();" aria-label="continue">Continue</md-button>
-          <md-button ng-click="$ctrl.previousStep();" aria-label="continue">Back</md-button>
-        </div>
+        <md-button class="md-accent md-raised" ng-click="$ctrl.nextStep();" aria-label="continue">Continue</md-button>
+        <md-button ng-click="$ctrl.previousStep();" aria-label="continue">Back</md-button>
       </div>
     </step>
     <step name="Deployment" label="D">
@@ -105,9 +96,8 @@
         <question question-number="21" question-text="We monitor applications running in production to collect and respond to threat intelligence"></question>
         <question question-number="22" question-text="We have a complete feedback loop to share incidents and identified vulnerabilitiy information back to development and design teams"></question>
         <div class="hpe-step__actions">
-          <md-button class="md-accent md-raised" ui-sref="results" aria-label="continue">Complete</md-button>
-          <md-button ng-click="$ctrl.previousStep();" aria-label="continue">Back</md-button>
-        </div>
+        <md-button class="md-accent md-raised" ui-sref="results" aria-label="continue">Complete</md-button>
+        <md-button ng-click="$ctrl.previousStep();" aria-label="continue">Back</md-button>
       </div>
     </step>
   </stepper>
