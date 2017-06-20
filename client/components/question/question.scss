@@ -1,6 +1,10 @@
 .questions {
 	max-height: 350px;
 	overflow-y: scroll;
+	background: #FEFEFE;
+	border: thin solid $palette--light-gray;
+	border-radius: 2px;
+	padding: 1em;
 }
 .question {
 	padding-top: 1em;

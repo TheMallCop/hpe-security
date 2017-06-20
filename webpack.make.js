@@ -192,7 +192,6 @@ module.exports = function makeWebpackConfig(options) {
             test: /\.(scss|sass)$/,
             loaders: ['style', 'css', 'sass'],
             include: [
-                // path.resolve(__dirname, 'node_modules/angular-material/angular-material.min.css'),
                 path.resolve(__dirname, 'node_modules/bootstrap-sass/assets/stylesheets/*.scss'),
                 path.resolve(__dirname, 'client/app/app.scss')
             ]

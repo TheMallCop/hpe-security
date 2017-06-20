@@ -23,11 +23,13 @@
         <div class="questions">
           <question ng-repeat="question in $ctrl.questions.sectionA" section-responses="$ctrl.questions.sectionA" section-index="{{$index}}" question-number="{{question.number}}" question-text="{{question.content}}" db-entity="{{question.dbEntity}}" analytics-name="{{question.analyticsName}}"></question>
         </div>
-        <div>
-          <md-button class="md-accent md-raised" ng-nothing="$ctrl.isSectionIncomplete('A');" ng-click="$ctrl.nextStep();" aria-label="continue">
-            Continue
-            <md-tooltip>Complete all questions in this section</md-tooltip>
-          </md-button>
+        <div class="hpe-step__actions">
+          <div>
+            <md-button class="md-accent md-raised" ng-disabled="$ctrl.isSectionIncomplete('A');" ng-click="$ctrl.nextStep();" aria-label="continue">
+              Continue
+            </md-button>
+          </div>
+          <em ng-show="$ctrl.isSectionIncomplete('A');">Complete all questions in this section to continue</em>
         </div>
       </div>
     </step>
