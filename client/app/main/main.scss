@@ -12,12 +12,20 @@ $rule: thin solid $palette--light-gray;
 
 // Animation
 
-@mixin quint-ease-out($target: all, $duration: 400ms, $target2: false, $duration2: 400ms) {
+@mixin quint-ease-out($target: all, $duration: 600ms, $target2: false, $duration2: 400ms) {
   @if $target2 == false {
     transition: $target $duration cubic-bezier(0.23, 1, 0.32, 1);
   }
   @else {
     transition: $target $duration cubic-bezier(0.23, 1, 0.32, 1), $target2 $duration2 cubic-bezier(0.23, 1, 0.32, 1);
+  }
+}
+@mixin quint-ease-in($target: all, $duration: 600ms, $target2: false, $duration2: 400ms) {
+  @if $target2 == false {
+    transition: $target $duration cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  }
+  @else {
+    transition: $target $duration cubic-bezier(0.755, 0.05, 0.855, 0.06), $target2 $duration2 cubic-bezier(0.755, 0.05, 0.855, 0.06);
   }
 }
 

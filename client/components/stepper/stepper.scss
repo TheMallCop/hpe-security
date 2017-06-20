@@ -16,16 +16,16 @@
 	}
 	&__body {
 		max-height: 0px !important;
-    @include quint-ease-out(max-height, 1000ms);
+    @include quint-ease-out(max-height, 800ms);
 		overflow: hidden;
 		margin-bottom: 1em;
-		@media screen and (min-width: 1000px) {
+		@media screen and (min-width: 800px) {
 			margin-left: -2em;    
   	}
 	}
 	&__body.active {
-		max-height: 3000px !important;
-    @include quint-ease-out(max-height, 1200ms);
+		max-height: 2000px !important;
+    @include quint-ease-in(max-height, 800ms);
 	}
 	&__label {
 		&__indicator {
