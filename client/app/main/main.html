@@ -29,7 +29,7 @@
               Continue
             </md-button>
           </div>
-          <em ng-show="$ctrl.isSectionIncomplete('A');">Complete all questions in this section to continue</em>
+          <em ng-show="$ctrl.isSectionIncomplete('A');"><i class="fa fa-info-circle"></i> Complete all questions in this section to continue</em>
         </div>
       </div>
     </step>
@@ -52,8 +52,11 @@
           <question ng-repeat="question in $ctrl.questions.sectionB" section-responses="$ctrl.questions.sectionB" section-index="{{$index}}" question-number="{{question.number}}" question-text="{{question.content}}" db-entity="{{question.dbEntity}}" analytics-name="{{question.analyticsName}}"></question>
         </div>
         <div class="hpe-step__actions">
-          <md-button class="md-accent md-raised" ng-disabled="$ctrl.isSectionIncomplete('B');" ng-click="$ctrl.nextStep();" aria-label="continue">Continue</md-button>
-          <md-button ng-click="$ctrl.previousStep();" aria-label="continue">Back</md-button>
+          <div>
+            <md-button class="md-accent md-raised" ng-disabled="$ctrl.isSectionIncomplete('B');" ng-click="$ctrl.nextStep();" aria-label="continue">Continue</md-button>
+            <md-button ng-click="$ctrl.previousStep();" aria-label="continue">Back</md-button>
+          </div>
+          <em ng-show="$ctrl.isSectionIncomplete('B');"><i class="fa fa-info-circle"></i> Complete all questions in this section to continue</em>
         </div>
       </div>
     </step>
@@ -76,8 +79,11 @@
           <question ng-repeat="question in $ctrl.questions.sectionC" section-responses="$ctrl.questions.sectionC" section-index="{{$index}}" question-number="{{question.number}}" question-text="{{question.content}}" db-entity="{{question.dbEntity}}" analytics-name="{{question.analyticsName}}"></question>
         </div>
         <div class="hpe-step__actions">
-          <md-button class="md-accent md-raised" ng-disabled="$ctrl.isSectionIncomplete('C');" ng-click="$ctrl.nextStep();" aria-label="continue">Continue</md-button>
-          <md-button ng-click="$ctrl.previousStep();" aria-label="continue">Back</md-button>
+          <div>
+            <md-button class="md-accent md-raised" ng-disabled="$ctrl.isSectionIncomplete('C');" ng-click="$ctrl.nextStep();" aria-label="continue">Continue</md-button>
+            <md-button ng-click="$ctrl.previousStep();" aria-label="continue">Back</md-button>
+          </div>
+          <em ng-show="$ctrl.isSectionIncomplete('C');"><i class="fa fa-info-circle"></i> Complete all questions in this section to continue</em>
         </div>
       </div>
     </step>
@@ -100,11 +106,11 @@
           <question ng-repeat="question in $ctrl.questions.sectionD" section-responses="$ctrl.questions.sectionD" section-index="{{$index}}" question-number="{{question.number}}" question-text="{{question.content}}" db-entity="{{question.dbEntity}}" analytics-name="{{question.analyticsName}}"></question>
         </div>
         <div class="hpe-step__actions">
-          <span>
+          <div>
             <md-button class="md-accent md-raised" ng-disabled="$ctrl.isSectionIncomplete('D');" ui-sref="results" aria-label="continue">Complete</md-button>
-            <md-tooltip ng-if="$ctrl.isSectionIncomplete('D')"></md-tooltip>
-          </span>
-          <md-button ng-click="$ctrl.previousStep();" aria-label="continue">Back</md-button>
+            <md-button ng-click="$ctrl.previousStep();" aria-label="continue">Back</md-button>
+          </div>
+          <em ng-show="$ctrl.isSectionIncomplete('D');"><i class="fa fa-info-circle"></i> Complete all questions in this section to continue</em>
         </div>
       </div>
     </step>

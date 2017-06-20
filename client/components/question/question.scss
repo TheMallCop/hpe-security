@@ -1,8 +1,8 @@
 .questions {
-	max-height: 350px;
+	max-height: 250px;
 	overflow-y: scroll;
-	background: #FEFEFE;
-	border: thin solid $palette--light-gray;
+	background: #FBFBFB;
+	border-top: thin solid $palette--light-gray;
 	border-radius: 2px;
 	padding: 1em;
 }

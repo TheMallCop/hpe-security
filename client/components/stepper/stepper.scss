@@ -61,4 +61,10 @@
 			}
 		}
 	}
+	&__actions {
+		padding-top: 1em;
+		.fa-info-circle {
+			color: $palette--alert;
+		}
+	}
 }
