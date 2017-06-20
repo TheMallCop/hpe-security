@@ -20,9 +20,14 @@
             </div>
           </div>
         </div>
-        <question ng-repeat="question in $ctrl.questions.sectionA" section-responses="$ctrl.questions.sectionA" section-index="{{$index}}" question-number="{{question.number}}" question-text="{{question.content}}" db-entity="{{question.dbEntity}}" analytics-name="{{question.analyticsName}}"></question>
+        <div class="questions">
+          <question ng-repeat="question in $ctrl.questions.sectionA" section-responses="$ctrl.questions.sectionA" section-index="{{$index}}" question-number="{{question.number}}" question-text="{{question.content}}" db-entity="{{question.dbEntity}}" analytics-name="{{question.analyticsName}}"></question>
+        </div>
         <div>
-          <md-button class="md-accent md-raised" ng-disabled="$ctrl.isSectionIncomplete('A');" ng-click="$ctrl.nextStep();" aria-label="continue">Continue</md-button>
+          <md-button class="md-accent md-raised" ng-nothing="$ctrl.isSectionIncomplete('A');" ng-click="$ctrl.nextStep();" aria-label="continue">
+            Continue
+            <md-tooltip>Complete all questions in this section</md-tooltip>
+          </md-button>
         </div>
       </div>
     </step>
@@ -41,7 +46,9 @@
             </div>
           </div>
         </div>
-        <question ng-repeat="question in $ctrl.questions.sectionB" section-responses="$ctrl.questions.sectionB" section-index="{{$index}}" question-number="{{question.number}}" question-text="{{question.content}}" db-entity="{{question.dbEntity}}" analytics-name="{{question.analyticsName}}"></question>
+        <div class="questions">
+          <question ng-repeat="question in $ctrl.questions.sectionB" section-responses="$ctrl.questions.sectionB" section-index="{{$index}}" question-number="{{question.number}}" question-text="{{question.content}}" db-entity="{{question.dbEntity}}" analytics-name="{{question.analyticsName}}"></question>
+        </div>
         <div class="hpe-step__actions">
           <md-button class="md-accent md-raised" ng-disabled="$ctrl.isSectionIncomplete('B');" ng-click="$ctrl.nextStep();" aria-label="continue">Continue</md-button>
           <md-button ng-click="$ctrl.previousStep();" aria-label="continue">Back</md-button>
@@ -63,7 +70,9 @@
             </div>
           </div>
         </div>
-        <question ng-repeat="question in $ctrl.questions.sectionC" section-responses="$ctrl.questions.sectionC" section-index="{{$index}}" question-number="{{question.number}}" question-text="{{question.content}}" db-entity="{{question.dbEntity}}" analytics-name="{{question.analyticsName}}"></question>
+        <div class="questions">
+          <question ng-repeat="question in $ctrl.questions.sectionC" section-responses="$ctrl.questions.sectionC" section-index="{{$index}}" question-number="{{question.number}}" question-text="{{question.content}}" db-entity="{{question.dbEntity}}" analytics-name="{{question.analyticsName}}"></question>
+        </div>
         <div class="hpe-step__actions">
           <md-button class="md-accent md-raised" ng-disabled="$ctrl.isSectionIncomplete('C');" ng-click="$ctrl.nextStep();" aria-label="continue">Continue</md-button>
           <md-button ng-click="$ctrl.previousStep();" aria-label="continue">Back</md-button>
@@ -85,10 +94,16 @@
             </div>
           </div>
         </div>
-        <question ng-repeat="question in $ctrl.questions.sectionD" section-responses="$ctrl.questions.sectionD" section-index="{{$index}}" question-number="{{question.number}}" question-text="{{question.content}}" db-entity="{{question.dbEntity}}" analytics-name="{{question.analyticsName}}"></question>
+        <div class="questions">
+          <question ng-repeat="question in $ctrl.questions.sectionD" section-responses="$ctrl.questions.sectionD" section-index="{{$index}}" question-number="{{question.number}}" question-text="{{question.content}}" db-entity="{{question.dbEntity}}" analytics-name="{{question.analyticsName}}"></question>
+        </div>
         <div class="hpe-step__actions">
-        <md-button class="md-accent md-raised" ng-disabled="$ctrl.isSectionIncomplete('D');" ui-sref="results" aria-label="continue">Complete</md-button>
-        <md-button ng-click="$ctrl.previousStep();" aria-label="continue">Back</md-button>
+          <span>
+            <md-button class="md-accent md-raised" ng-disabled="$ctrl.isSectionIncomplete('D');" ui-sref="results" aria-label="continue">Complete</md-button>
+            <md-tooltip ng-if="$ctrl.isSectionIncomplete('D')"></md-tooltip>
+          </span>
+          <md-button ng-click="$ctrl.previousStep();" aria-label="continue">Back</md-button>
+        </div>
       </div>
     </step>
   </stepper>
