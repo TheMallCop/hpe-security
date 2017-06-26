@@ -10,16 +10,16 @@ This project was generated with the [Angular Full-Stack Generator](https://githu
 - [Node.js and npm](nodejs.org) Node >= 4.x.x, npm >= 2.x.x
 - [Gulp](http://gulpjs.com/) (`npm install --global gulp`)
 
-### Developing
+### Set up
 
-1. Run `npm install` to install server dependencies.
+Run `npm install` to install server dependencies.
 
-2. Run `gulp serve` to start the development server. It should automatically open the client in your browser when ready.
+## Developing
 
-## Build & development
+Run `gulp serve` to start the development server. It should automatically open the client in your browser when ready on localhost:3000
 
-Run `gulp build` for building and `gulp serve` for preview.
+Run 'gulp serve:dist' to run production code (stored in _dist/_ directory)
 
-## Testing
+## Build for production
 
-Running `npm test` will run the unit tests with karma.
+Run `gulp build` for building production-ready code, packaged inside of the _dist/_ directory
