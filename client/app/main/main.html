@@ -4,8 +4,8 @@
 </hpe-header>
 <section class="hpe-container">
   <h2>Begin the assessment</h2>
-  <stepper steps="$ctrl.steps" active-step="{{$ctrl.activeStep}}" completed-steps="{{$ctrl.completedSteps}}">
-    <step name="Governance" label="A">
+  <horizontal-stepper steps="$ctrl.steps" active-step="{{$ctrl.activeStep}}" completed-steps="{{$ctrl.completedSteps}}">
+    <horizontal-step name="Governance" label="A">
       <div layout="column">
         <p flex>
           Etiam eget est eu ligula iaculis varius. Donec nec dui facilisis lectus malesuada vehicula eu a neque. Sed vel lacus non erat bibendum accumsan. Suspendisse potenti. Phasellus in turpis sit amet neque feugiat pellentesque. Nulla varius mi ut nisl tincidunt, sit amet faucibus augue volutpat.
@@ -32,8 +32,8 @@
           <em ng-show="$ctrl.isSectionIncomplete('A');"><i class="fa fa-info-circle"></i> Complete all questions in this section to continue</em>
         </div>
       </div>
-    </step>
-    <step name="Construction" label="B">
+    </horizontal-step>
+    <horizontal-step name="Construction" label="B">
       <div layout="column">
         <p flex>
           Phasellus id convallis ex. Sed non quam lectus. Praesent dignissim efficitur ligula non tempor. Duis vitae rutrum nisl, eu ultrices libero. Integer accumsan, massa consequat pellentesque facilisis, dolor eros facilisis sem, quis vehicula elit felis vitae magna. Nullam facilisis diam nisi, eu fringilla libero interdum vel. Etiam nibh justo, molestie ac est sed, finibus bibendum nulla. Curabitur non volutpat velit.
@@ -59,8 +59,8 @@
           <em ng-show="$ctrl.isSectionIncomplete('B');"><i class="fa fa-info-circle"></i> Complete all questions in this section to continue</em>
         </div>
       </div>
-    </step>
-    <step name="Verification" label="C">
+    </horizontal-step>
+    <horizontal-step name="Verification" label="C">
       <div layout="column">
         <p flex>
           In ut neque tortor. Proin eleifend tempus gravida. Morbi dignissim, libero quis vestibulum pharetra, odio arcu lacinia nisi, a mollis enim neque vel elit. Morbi risus enim, tristique sed facilisis vitae, sollicitudin quis nisi. Integer mollis eros in odio gravida euismod. Fusce pretium ante nec molestie rutrum. Pellentesque egestas ipsum eu quam dapibus, id fermentum augue tincidunt.
@@ -86,8 +86,8 @@
           <em ng-show="$ctrl.isSectionIncomplete('C');"><i class="fa fa-info-circle"></i> Complete all questions in this section to continue</em>
         </div>
       </div>
-    </step>
-    <step name="Deployment" label="D">
+    </horizontal-step>
+    <horizontal-step name="Deployment" label="D">
       <div layout="column">
         <p flex>
           Pellentesque in porttitor augue, eget varius erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi eleifend tortor non risus ultricies tincidunt nec ultrices sem. Aenean ultrices tincidunt mi, sed dapibus nibh placerat vitae. Integer laoreet nibh ac nisl placerat, id imperdiet mi porta.
@@ -113,6 +113,6 @@
           <em ng-show="$ctrl.isSectionIncomplete('D');"><i class="fa fa-info-circle"></i> Complete all questions in this section to continue</em>
         </div>
       </div>
-    </step>
-  </stepper>
+    </horizontal-step>
+  </horizontal-stepper>
 </section>

@@ -6,12 +6,12 @@ export class HorizontalStepComponent {
 	}
 	// Get the active step
 	$doCheck() {
-	  if (this.stepperCtrl.activeStep === this.label) {
+	  if (this.horizontalStepperCtrl.activeStep === this.label) {
 	  	this.active = true;
 	  } else {
 	  	this.active = false;
 	  }
-	  if (this.stepperCtrl.completedSteps.includes(this.label)) {
+	  if (this.horizontalStepperCtrl.completedSteps.includes(this.label)) {
 	  	this.complete = true;
 	  } else {
 	  	this.complete = false;
