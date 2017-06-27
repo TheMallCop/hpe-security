@@ -1,0 +1,15 @@
+<div class="hpe-step">
+  <div class="hpe-step__label" layout="row">
+    <div class="hpe-step__label__indicator">
+      <span ng-if="$ctrl.complete" class="fa fa-check"></span>
+      <span ng-if="!$ctrl.complete">{{$ctrl.label}}</span>
+    </div>
+    <h4 class="hpe-step__label__name" ng-class="{active: $ctrl.active}">{{$ctrl.name}}</h4>
+  </div>
+  <div layout="row">
+    <div class="hpe-step__line" flex="5"  ng-class="{active: $ctrl.active, 'last': $ctrl.label === $ctrl.lastStep}"></div>
+    <div class="hpe-step__body" flex="95" ng-class="{active: $ctrl.active}">
+      <div ng-transclude></div>
+    </div>
+  </div>
+</div>

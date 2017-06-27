@@ -1,0 +1,70 @@
+.hpe-horizontal-stepper {
+	margin-top: 2em;
+}
+.hpe-horizontal-step {
+	&__line {
+		height: 30px;
+		margin: 10px 10px 5px;
+    border-left: thin solid $palette--light-gray;
+    position: relative;
+	}
+	&__line.active {
+		height: auto;
+	}
+	&__line.last:not(.active) {
+		border-left: none;
+	}
+	&__body {
+		max-height: 0px !important;
+    @include quint-ease-out(max-height, 800ms);
+		overflow: hidden;
+		margin-bottom: 1em;
+		@media screen and (min-width: 800px) {
+			margin-left: -2em;    
+  	}
+	}
+	&__body.active {
+		max-height: 2000px !important;
+    @include quint-ease-in(max-height, 800ms);
+	}
+	&__label {
+		&__indicator {
+			text-align: center;
+			background-color: $palette--accent;
+			color: #FFF;
+			border-radius: 25px;
+			width: 22px;
+			height: 22px;
+			margin-right: 0.75em;
+			font-size: 0.8em;
+			position: relative;
+			top: 0.5em;
+			span {
+				position: absolute;
+				top: 1.65px;
+    		left: 0;
+    		right: 0;
+    		&::before {
+    			position: absolute;
+    			top: 0.22em;
+			    left: 0;
+			    right: 0;
+    		}
+			}
+		}
+		&__name {
+			padding-top: 0.16em;
+			margin: 0;
+			color: $palette--gray;
+			&.active {
+				color: $palette--black;
+			}
+		}
+	}
+	&__actions {
+		padding-top: 1em;
+		.fa-info-circle {
+			color: $palette--alert;
+		}
+	}
+}
