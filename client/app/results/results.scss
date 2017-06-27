@@ -37,17 +37,18 @@ md-slider[disabled][readonly] .md-sign {
     display: block;
     height: 30px;
     width: 30px;
+    margin-left: -30px; // To offset the left property in the element
     border-radius: 25px;
     background-color: purple;
-    top: -18px;
+    top: -17px;
     &__text {
       color: #FFF;
       position: absolute;
       font-size: 12px;
       font-weight: $font__weight--bold;
-      top: 6px;
+      top: 7px;
       left: 50%;
-      margin-left: -10px;
+      margin-left: -9px;
     }
     &::before {
       content: '';
@@ -56,7 +57,7 @@ md-slider[disabled][readonly] .md-sign {
       height: 16px;
       width: 16px;
       top: 17px;
-      left: 7.5px;
+      left: 7px;
       transform: rotate(45deg);
       background: purple;
     }
