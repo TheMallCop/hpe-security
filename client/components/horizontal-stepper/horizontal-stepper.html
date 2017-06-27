@@ -1,13 +1,15 @@
 <md-card class="hpe-horizontal-stepper" steps="$ctrl.steps">
-	<div class="hpe-stepper__header" layout="row" layout-align="space-between">
-		<div class="hpe-stepper__header__step" ng-repeat="step in $ctrl.steps">
+	<div class="hpe-horizontal-stepper__header" layout="row" layout-align="space-between">
+		<div class="hpe-horizontal-stepper__header__step" ng-repeat="step in $ctrl.steps">
 			<div class="hpe-step__label" layout="row">
 			  <div class="hpe-step__label__indicator">
 			    <span ng-if="step.complete" class="fa fa-check"></span>
 			    <span ng-if="!step.complete">{{step.label}}</span>
 			  </div>
 			  <h4 class="hpe-step__label__name" ng-class="{active: step.active}">{{step.name}}</h4>
+				<!-- <div class="hpe-horizontal-stepper__line" ng-hide="$last"></div> -->
 			</div>
 		</div>
 	</div>
+	<md-card-content ng-transclude></md-card-content>
 </md-card>

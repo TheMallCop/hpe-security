@@ -1,14 +1,14 @@
 .hpe-horizontal-stepper {
-	margin-top: 2em;
-	padding: 1em 2em;
+	&__header {
+		padding: 1em 2em;
+		border-bottom: thin solid $palette--light-gray;
+	}
+	&__line {
+    border-bottom: thin solid $palette--light-gray;
+    width: 80%;
+	}
 }
 .hpe-horizontal-step {
-	&__line {
-		height: 30px;
-		margin: 10px 10px 5px;
-    border-left: thin solid $palette--light-gray;
-    position: relative;
-	}
 	&__line.active {
 		height: auto;
 	}
@@ -16,13 +16,8 @@
 		border-left: none;
 	}
 	&__body {
-		max-height: 0px !important;
-    @include quint-ease-out(max-height, 800ms);
-		overflow: hidden;
-		margin-bottom: 1em;
-		@media screen and (min-width: 800px) {
-			margin-left: -2em;    
-  	}
+		padding-top: 2em;
+		background-color: #FFF;
 	}
 	&__body.active {
 		max-height: 2000px !important;
