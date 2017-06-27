@@ -5,19 +5,40 @@ import routing from './main.routes';
 export class MainController {
 
   $onInit() {
-    this.steps = ['A', 'B', 'C', 'D'];
-    var stepCounter = 0;
-    this.completedSteps = [];
-    this.activeStep = this.steps[stepCounter];
+    this.steps = [
+      {
+        label: 'A',
+        name: 'Governance',
+        completed: false,
+        active: true
+      }, {
+        label: 'B',
+        name: 'Construction',
+        completed: false,
+        active: false
+      }, {
+        label: 'C',
+        name: 'Verification',
+        completed: false,
+        active: false
+      }, {
+        label: 'D',
+        name: 'Deployment',
+        completed: false,
+        active: false
+      }
+    ];
+    // var stepCounter = 0;
+    // this.activeStep = this.steps[stepCounter];
     this.nextStep = () => {
-      this.completedSteps.push(this.activeStep);
-      stepCounter += 1;
-      this.activeStep = this.steps[stepCounter]; 
+      // this.completedSteps.push(this.activeStep);
+      // stepCounter += 1;
+      // this.activeStep = this.steps[stepCounter]; 
     };
     this.previousStep = () => {
-      this.completedSteps.pop();
-      stepCounter -= 1;
-      this.activeStep = this.steps[stepCounter]; 
+      // this.completedSteps.pop();
+      // stepCounter -= 1;
+      // this.activeStep = this.steps[stepCounter]; 
     };
     this.questions = {
       sectionA: [
@@ -165,15 +186,15 @@ export class MainController {
         }
       ]
     };
-    this.isSectionIncomplete = (sectionLabel) => {
-      var isIncomplete = false;
-      this.questions['section' + sectionLabel].forEach((question) => {
-        if (question.responded === false) {
-          isIncomplete = true;
-        }
-      });
-      return isIncomplete;
-    };
+    // this.isSectionIncomplete = (sectionLabel) => {
+    //   var isIncomplete = false;
+    //   this.questions['section' + sectionLabel].forEach((question) => {
+    //     if (question.responded === false) {
+    //       isIncomplete = true;
+    //     }
+    //   });
+    //   return isIncomplete;
+    // };
   }
 }
 

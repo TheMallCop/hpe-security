@@ -3,10 +3,10 @@
 		<div class="hpe-stepper__header__step" ng-repeat="step in $ctrl.steps">
 			<div class="hpe-step__label" layout="row">
 			  <div class="hpe-step__label__indicator">
-			    <span ng-if="$ctrl.complete" class="fa fa-check"></span>
-			    <span ng-if="!$ctrl.complete">{{step}}</span>
+			    <span ng-if="step.complete" class="fa fa-check"></span>
+			    <span ng-if="!step.complete">{{step.label}}</span>
 			  </div>
-			  <h4 class="hpe-step__label__name" ng-class="{active: $ctrl.active}">Step name</h4>
+			  <h4 class="hpe-step__label__name" ng-class="{active: step.active}">{{step.name}}</h4>
 			</div>
 		</div>
 	</div>
