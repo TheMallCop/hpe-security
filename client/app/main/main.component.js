@@ -3,42 +3,57 @@ import uiRouter from 'angular-ui-router';
 import routing from './main.routes';
 
 export class MainController {
-
+  constructor($state) {
+    this.$state = $state;
+  }
   $onInit() {
     this.steps = [
       {
         label: 'A',
         name: 'Governance',
-        completed: false,
+        complete: false,
         active: true
       }, {
         label: 'B',
         name: 'Construction',
-        completed: false,
+        complete: false,
         active: false
       }, {
         label: 'C',
         name: 'Verification',
-        completed: false,
+        complete: false,
         active: false
       }, {
         label: 'D',
         name: 'Deployment',
-        completed: false,
+        complete: false,
         active: false
       }
     ];
-    // var stepCounter = 0;
-    // this.activeStep = this.steps[stepCounter];
     this.nextStep = () => {
-      // this.completedSteps.push(this.activeStep);
-      // stepCounter += 1;
-      // this.activeStep = this.steps[stepCounter]; 
+      var nextStep = false;
+      this.steps.forEach((step, index) => {
+        if (step.active && !nextStep) {
+          if (index === this.steps.length -1) {
+            this.$state.go('results');
+          }
+          step.active = false;
+          step.complete = true;
+          nextStep = index + 1;
+          this.steps[nextStep].active = true;
+        }
+      })
     };
     this.previousStep = () => {
-      // this.completedSteps.pop();
-      // stepCounter -= 1;
-      // this.activeStep = this.steps[stepCounter]; 
+      var previousStep = false;
+      this.steps.forEach((step, index) => {
+        if (step.active && !previousStep) {
+          step.active = false;
+          previousStep = index - 1;
+          this.steps[previousStep].active = true;
+          this.steps[previousStep].complete = false;
+        }
+      })
     };
     this.questions = {
       sectionA: [
@@ -186,17 +201,10 @@ export class MainController {
         }
       ]
     };
-    // this.isSectionIncomplete = (sectionLabel) => {
-    //   var isIncomplete = false;
-    //   this.questions['section' + sectionLabel].forEach((question) => {
-    //     if (question.responded === false) {
-    //       isIncomplete = true;
-    //     }
-    //   });
-    //   return isIncomplete;
-    // };
   }
 }
+
+MainController.$inject = ['$state'];
 
 export default angular.module('hpeSecurityApp.main', [uiRouter])
   .config(routing)

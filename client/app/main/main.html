@@ -24,6 +24,9 @@
           <question ng-repeat="question in $ctrl.questions['section' + step.label]" section-responses="$ctrl.questions['section' + step.label]" section-index="{{$index}}" question-number="{{question.number}}" question-text="{{question.content}}" db-entity="{{question.dbEntity}}" analytics-name="{{question.analyticsName}}"></question>
         </div>
         <div class="hpe-step__actions" layout="row" layout-align="end">
+          <md-button class="md-raised" ng-hide="$first" ng-click="$ctrl.previousStep();" aria-label="continue">
+            Back
+          </md-button>
           <md-button class="md-accent md-raised" ng-disabled="$ctrl.isSectionIncomplete('A');" ng-click="$ctrl.nextStep();" aria-label="continue">
             Continue
           </md-button>

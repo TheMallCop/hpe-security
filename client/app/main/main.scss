@@ -51,7 +51,8 @@ h4 {
   font-weight: $font__weight--bold;
   margin-left: 0;
 }
-.md-button.md-raised.md-raised {
+.md-button.md-accent.md-raised,
+.md-button.md-primary.md-raised {
   color: #FFF;
 }
 p {

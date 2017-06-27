@@ -9,53 +9,9 @@
 	}
 }
 .hpe-horizontal-step {
-	&__line.active {
-		height: auto;
-	}
-	&__line.last:not(.active) {
-		border-left: none;
-	}
 	&__body {
 		padding-top: 2em;
 		background-color: #FFF;
-	}
-	&__body.active {
-		max-height: 2000px !important;
-    @include quint-ease-in(max-height, 800ms);
-	}
-	&__label {
-		&__indicator {
-			text-align: center;
-			background-color: $palette--accent;
-			color: #FFF;
-			border-radius: 25px;
-			width: 22px;
-			height: 22px;
-			margin-right: 0.75em;
-			font-size: 0.8em;
-			position: relative;
-			top: 0.5em;
-			span {
-				position: absolute;
-				top: 1.65px;
-    		left: 0;
-    		right: 0;
-    		&::before {
-    			position: absolute;
-    			top: 0.22em;
-			    left: 0;
-			    right: 0;
-    		}
-			}
-		}
-		&__name {
-			padding-top: 0.16em;
-			margin: 0;
-			color: $palette--gray;
-			&.active {
-				color: $palette--black;
-			}
-		}
 	}
 	&__actions {
 		padding-top: 1em;
