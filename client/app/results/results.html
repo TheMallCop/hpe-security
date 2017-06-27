@@ -12,7 +12,11 @@
         <div flex="40">
           <p>Summary results indicate a relatively new maturity level when it comes to the focus area of Strategy and Metrics.</p>
         </div>
-        <div flex flex-gt-sm="40" flex-offset-gt-sm="10" class="slider">
+        <div flex flex-gt-sm="40" flex-offset-gt-sm="10" class="hpe-slider">
+          <!-- <div class="hpe-slider__average">Avg</div> -->
+          <div class="hpe-slider__benchmark-thumb">
+            <span class="hpe-slider__benchmark-thumb__text">Avg.</span>
+          </div>
           <md-slider-container>
             <md-slider ng-model="$ctrl.sliderScores.governance" step="1" max="10" aria-label="Governance" ng-readonly="$ctrl.readOnly" md-discrete ng-disabled="true"></md-slider>
           </md-slider-container>
