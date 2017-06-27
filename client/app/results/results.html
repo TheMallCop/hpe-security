@@ -12,13 +12,16 @@
         <div flex="40">
           <p>Summary results indicate a relatively new maturity level when it comes to the focus area of Strategy and Metrics.</p>
         </div>
-        <div flex flex-gt-sm="40" flex-offset-gt-sm="10" class="slider">
+        <div flex flex-gt-sm="40" flex-offset-gt-sm="10" class="hpe-slider">
+          <div class="hpe-slider__benchmark-thumb" ng-attr-style="{{$ctrl.getAvgOffset(10)}}">
+            <span class="hpe-slider__benchmark-thumb__text">avg</span>
+          </div>
           <md-slider-container>
             <md-slider ng-model="$ctrl.sliderScores.governance" step="1" max="10" aria-label="Governance" ng-readonly="$ctrl.readOnly" md-discrete ng-disabled="true"></md-slider>
           </md-slider-container>
-          <div class="slider__label" layout="row" layout-align="space-between">
-            <div class="slider__label__min" flex>Less mature</div>
-            <div class="slider__label__max" flex>More mature</div>
+          <div class="hpe-slider__label" layout="row" layout-align="space-between">
+            <div class="hpe-slider__label__min" flex>Less mature</div>
+            <div class="hpe-slider__label__max" flex>More mature</div>
           </div>
         </div>
       </div>
@@ -29,13 +32,16 @@
         <div flex="40">
           <p>A relatively new maturity level in modeling application security threats</p>
         </div>
-        <div flex flex-gt-sm="40" flex-offset-gt-sm="10" class="slider">
+        <div flex flex-gt-sm="40" flex-offset-gt-sm="10" class="hpe-slider">
+          <div class="hpe-slider__benchmark-thumb" ng-attr-style="{{$ctrl.getAvgOffset(2)}}">
+            <span class="hpe-slider__benchmark-thumb__text">avg</span>
+          </div>
           <md-slider-container>
             <md-slider ng-model="$ctrl.sliderScores.construction" step="1" max="10" aria-label="Construction" ng-readonly="$ctrl.readOnly" md-discrete ng-disabled="true"></md-slider>
           </md-slider-container>
-          <div class="slider__label" layout="row" layout-align="space-between">
-            <div class="slider__label__min" flex>Less mature</div>
-            <div class="slider__label__max" flex>More mature</div>
+          <div class="hpe-slider__label" layout="row" layout-align="space-between">
+            <div class="hpe-slider__label__min" flex>Less mature</div>
+            <div class="hpe-slider__label__max" flex>More mature</div>
           </div>
         </div>
       </div>
@@ -46,13 +52,16 @@
         <div flex="40">
           <p>Across a sample of "big picture" security activities in development, your answers suggest a relatively low maturity level in the area of strategy and planning.</p>
         </div>
-        <div flex flex-gt-sm="40" flex-offset-gt-sm="10" class="slider">
+        <div flex flex-gt-sm="40" flex-offset-gt-sm="10" class="hpe-slider">
+          <div class="hpe-slider__benchmark-thumb" ng-attr-style="{{$ctrl.getAvgOffset(5)}}">
+            <span class="hpe-slider__benchmark-thumb__text">avg</span>
+          </div>
           <md-slider-container>
             <md-slider ng-model="$ctrl.sliderScores.verification" step="1" max="10" aria-label="Verification" ng-readonly="$ctrl.readOnly" md-discrete ng-disabled="true"></md-slider>
           </md-slider-container>
-          <div class="slider__label" layout="row" layout-align="space-between">
-            <div class="slider__label__min" flex>Less mature</div>
-            <div class="slider__label__max" flex>More mature</div>
+          <div class="hpe-slider__label" layout="row" layout-align="space-between">
+            <div class="hpe-slider__label__min" flex>Less mature</div>
+            <div class="hpe-slider__label__max" flex>More mature</div>
           </div>
         </div>
       </div>
@@ -63,13 +72,16 @@
         <div flex="40">
           <p>A relatively low level of maturity in the processes around Operational Enablement and Environment Hardening</p>
         </div>
-        <div flex flex-gt-sm="40" flex-offset-gt-sm="10" class="slider">
+        <div flex flex-gt-sm="40" flex-offset-gt-sm="10" class="hpe-slider">
+          <div class="hpe-slider__benchmark-thumb" ng-attr-style="{{$ctrl.getAvgOffset(6)}}">
+            <span class="hpe-slider__benchmark-thumb__text">avg</span>
+          </div>
           <md-slider-container>
             <md-slider ng-model="$ctrl.sliderScores.deployment" step="1" max="10" aria-label="Deployment" ng-readonly="$ctrl.readOnly" md-discrete ng-disabled="true"></md-slider>
           </md-slider-container>
-          <div class="slider__label" layout="row" layout-align="space-between">
-            <div class="slider__label__min" flex>Less mature</div>
-            <div class="slider__label__max" flex>More mature</div>
+          <div class="hpe-slider__label" layout="row" layout-align="space-between">
+            <div class="hpe-slider__label__min" flex>Less mature</div>
+            <div class="hpe-slider__label__max" flex>More mature</div>
           </div>
         </div>
       </div>

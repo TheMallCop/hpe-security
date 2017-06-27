@@ -12,6 +12,10 @@ export class ResultsController {
 
     };
     this.readOnly = true;
+    this.getAvgOffset = (score) => {
+      var offset = score * 10;
+      return 'left: ' + offset + '%;';
+    };
   }
 }
 

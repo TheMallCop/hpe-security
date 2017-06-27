@@ -22,13 +22,45 @@ md-slider[disabled][readonly] .md-sign {
     }
 	}
 }
-.slider {
+.hpe-slider {
   margin-top: 2em;
+  position: relative;
   &__label {
     font-weight: $font__weight--bold;
     color: $palette--gray;
+    margin-top: 24px;
     &__max {
       text-align: right;
+    }
+  }
+  &__benchmark-thumb {
+    position: absolute;
+    display: block;
+    height: 30px;
+    width: 30px;
+    margin-left: -15px; // To offset the left property in the element
+    border-radius: 25px;
+    background-color: $palette--gray;
+    top: 34px;
+    &__text {
+      color: #FFF;
+      position: absolute;
+      font-size: 12px;
+      font-weight: $font__weight--bold;
+      top: 7px;
+      left: 50%;
+      margin-left: -9px;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 16px;
+      width: 16px;
+      top: -3px;
+      left: 7px;
+      transform: rotate(45deg);
+      background: $palette--gray;
     }
   }
 }
