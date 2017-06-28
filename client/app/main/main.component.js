@@ -215,7 +215,6 @@ export class MainController {
       ]
     };
     this.isSectionIncomplete = (sectionLabel) => {
-      return false;
       var isIncomplete = false;
       this.questions['section' + sectionLabel].forEach((question) => {
         if (question.responded === false) {
