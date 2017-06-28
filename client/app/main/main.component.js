@@ -214,6 +214,15 @@ export class MainController {
         }
       ]
     };
+    this.isSectionIncomplete = (sectionLabel) => {
+      var isIncomplete = false;
+      this.questions['section' + sectionLabel].forEach((question) => {
+        if (question.responded === false) {
+          isIncomplete = true;
+        }
+      });
+      return isIncomplete;
+    };
   }
 }
 
