@@ -46,6 +46,7 @@ export class MainController {
         if (step.active && !nextStep) {
           if (index === this.steps.length -1) {
             this.$state.go('results');
+            return;
           }
           step.active = false;
           step.complete = true;

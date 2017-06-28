@@ -1,15 +1,14 @@
 import angular from 'angular';
 
-export class StepperComponent {}
+export class HorizontalStepperComponent {
+}
 
 export default angular.module('directives.horizontalStepper', [])
   .component('horizontalStepper', {
     template: require('./horizontal-stepper.html'),
-    controller: StepperComponent,
+    controller: HorizontalStepperComponent,
     transclude: true,
     bindings: {
-    	activeStep: '@',
-    	completedSteps: '@',
       steps: '='
     }
   })
