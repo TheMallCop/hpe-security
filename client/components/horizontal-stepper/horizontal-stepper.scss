@@ -1,11 +1,53 @@
 .hpe-horizontal-stepper {
 	&__header {
-		padding: 1em 2em;
+		padding: 1em 1em;
 		border-bottom: thin solid $palette--light-gray;
+		overflow-x: scroll;
 	}
 	&__line {
     border-bottom: thin solid $palette--light-gray;
     width: 80%;
+	}
+	&__label {
+		margin: 0 1em;
+		&__indicator {
+			text-align: center;
+			background-color: $palette--accent;
+			color: #FFF;
+			border-radius: 25px;
+			width: 22px;
+			height: 22px;
+			margin-right: 0.75em;
+			font-size: 0.8em;
+			position: relative;
+			top: 0.5em;
+			span {
+				position: absolute;
+				top: 1.8px;
+    		left: 0;
+    		right: 0;
+    		&::before {
+    			position: absolute;
+    			top: 0.22em;
+			    left: 0;
+			    right: 0;
+    		}
+			}
+		}
+		&__name {
+			padding-top: 0.16em;
+			margin: 0;
+			color: $palette--gray;
+			&.active {
+				color: $palette--black;
+			}
+		}
+	}
+	&__actions {
+		padding-top: 1em;
+		.fa-info-circle {
+			color: $palette--alert;
+		}
 	}
 }
 .hpe-horizontal-step {
