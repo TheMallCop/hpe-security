@@ -38,6 +38,9 @@ $rule: thin solid $palette--light-gray;
   }
 }
 
+// Material layout bug fix
+[layout-sm=column] { display: block; } 
+
 // Main styles
 body {
   font-family: 'metric';
