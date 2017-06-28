@@ -5,7 +5,7 @@
 <section class="hpe-container">
   <h2>Begin the assessment</h2>
   <horizontal-stepper steps="$ctrl.steps">
-    <horizontal-step ng-repeat="step in $ctrl.steps" ng-show="step.active">
+    <horizontal-step ng-repeat="step in $ctrl.steps" ng-show="step.active" active="step.active">
       <div layout="column">
         <p flex>
           {{step.description}}

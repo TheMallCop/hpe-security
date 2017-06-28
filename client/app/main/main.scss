@@ -28,6 +28,15 @@ $rule: thin solid $palette--light-gray;
     transition: $target $duration cubic-bezier(0.755, 0.05, 0.855, 0.06), $target2 $duration2 cubic-bezier(0.755, 0.05, 0.855, 0.06);
   }
 }
+.slide {
+  &--off {
+    @include quint-ease-out(transform, 400ms);
+    transform: translateX(0%);
+  }
+  &--on {
+    transform: translateX(100%);
+  }
+}
 
 // Main styles
 body {

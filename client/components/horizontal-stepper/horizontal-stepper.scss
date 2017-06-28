@@ -10,6 +10,7 @@
 }
 .hpe-horizontal-step {
 	&__body {
+		overflow: hidden;
 		padding-top: 2em;
 		background-color: #FFF;
 	}
