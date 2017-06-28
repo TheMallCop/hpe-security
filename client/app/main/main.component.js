@@ -18,22 +18,26 @@ export class MainController {
         label: 'A',
         name: 'Governance',
         complete: false,
-        active: true
+        active: true,
+        description: 'Etiam eget est eu ligula iaculis varius. Donec nec dui facilisis lectus malesuada vehicula eu a neque. Sed vel lacus non erat bibendum accumsan. Suspendisse potenti. Phasellus in turpis sit amet neque feugiat pellentesque. Nulla varius mi ut nisl tincidunt, sit amet faucibus augue volutpat.'
       }, {
         label: 'B',
         name: 'Construction',
         complete: false,
-        active: false
+        active: false,
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra odio vel nisl maximus pretium. Proin felis lectus, posuere eget neque in, facilisis maximus lectus. Nulla molestie nunc nibh, et commodo turpis lobortis nec.'
       }, {
         label: 'C',
         name: 'Verification',
         complete: false,
-        active: false
+        active: false,
+        description: 'Nulla eleifend, nunc eget mattis tristique, libero nibh porttitor lectus, a semper nisl nisi vitae sem. Morbi convallis congue lobortis. Vestibulum id tempus velit. Maecenas at semper dolor, non sollicitudin tortor.'
       }, {
         label: 'D',
         name: 'Deployment',
         complete: false,
-        active: false
+        active: false,
+        description: 'Phasellus tincidunt consequat dolor, in tincidunt nisi fringilla nec. Vivamus vitae nisl ut urna pulvinar vestibulum et eu orci. Phasellus nec nisi a odio mollis blandit ac ac tortor. Praesent bibendum, mauris eu porttitor semper, dolor ante viverra elit, vitae pellentesque est nibh vitae orci.'
       }
     ];
     this.nextStep = () => {

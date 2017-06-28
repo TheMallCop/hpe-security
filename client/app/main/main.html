@@ -8,7 +8,7 @@
     <horizontal-step ng-repeat="step in $ctrl.steps" ng-show="step.active">
       <div layout="column">
         <p flex>
-          Etiam eget est eu ligula iaculis varius. Donec nec dui facilisis lectus malesuada vehicula eu a neque. Sed vel lacus non erat bibendum accumsan. Suspendisse potenti. Phasellus in turpis sit amet neque feugiat pellentesque. Nulla varius mi ut nisl tincidunt, sit amet faucibus augue volutpat.
+          {{step.description}}
         </p>
         <div layout="row">
           <div class="options__labels" layout="row" layout-align="space-between" flex flex-offset-gt-sm="50">
@@ -30,7 +30,7 @@
           <md-button class="md-accent md-raised" ng-disabled="$ctrl.isSectionIncomplete('A');" ng-click="$ctrl.nextStep();" aria-label="continue">
             Continue
           </md-button>
-          <em ng-show="$ctrl.isSectionIncomplete('A');"><i class="fa fa-info-circle"></i> Complete all questions in this section to continue</em>
+          <em ng-show="$ctrl.isSectionIncomplete(step.label);"><i class="fa fa-info-circle"></i> Complete all questions in this section to continue</em>
         </div>
       </div>
     </horizontal-step>
