@@ -39,7 +39,9 @@ $rule: thin solid $palette--light-gray;
 }
 
 // Material layout bug fix
-[layout=column] { display: block; }
+@media screen and (max-width: 960px) {
+  [layout=column] { display: block; }
+}
 [layout-sm=column] { display: block; }
 
 // Main styles
