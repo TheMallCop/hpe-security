@@ -4,6 +4,9 @@ import routing from './results.routes';
 
 export class ResultsController {
   $onInit() {
+    this.alert = () => {
+      console.log('change happened!');
+    }
     this.sliderScores = {
       governance: 4,
       construction: 7,

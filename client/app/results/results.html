@@ -13,11 +13,11 @@
           <p>Summary results indicate a relatively new maturity level when it comes to the focus area of Strategy and Metrics.</p>
         </div>
         <div flex flex-gt-sm="40" flex-offset-gt-sm="10" class="hpe-slider">
-          <div class="hpe-slider__benchmark-thumb" ng-attr-style="{{$ctrl.getAvgOffset(10)}}">
+          <div class="hpe-slider__benchmark-thumb" ng-attr-style="{{$ctrl.getAvgOffset($ctrl.governanceScore)}}">
             <span class="hpe-slider__benchmark-thumb__text">avg</span>
           </div>
           <md-slider-container>
-            <md-slider ng-model="$ctrl.sliderScores.governance" step="1" max="10" aria-label="Governance" ng-readonly="$ctrl.readOnly" md-discrete ng-disabled="true"></md-slider>
+            <md-slider ng-model="$ctrl.governanceScore" step="1" max="10" aria-label="Governance" ng-readonly="$ctrl.readOnly" md-discrete ng-disabled="true"></md-slider>
           </md-slider-container>
           <div class="hpe-slider__label" layout="row" layout-align="space-between">
             <div class="hpe-slider__label__min" flex>Less mature</div>
@@ -120,3 +120,26 @@
     </div>
   </div>
 </section>
+<div id="shadow-form" style="display:block">
+  <h3>Governance</h3>
+  <!-- <mainstay-output></mainstay-output> -->
+  <div>
+    <label>Score</label>
+    <input id="governance-score" class="regOutput microToolInput"  ng-attr-data-dbentity="governanceScore" ng-attr-data-analyticsname="Governance Score" value="7" ng-model="$ctrl.governanceScore" ng-change="$ctrl.alert()">
+  </div>
+  <h3>Construction</h3>
+  <div ng-repeat="question in $ctrl.questions.sectionB">
+    <label>{{question.dbEntity}}</label>
+    <input id="{{question.dbEntity}}" class="regInput microToolInput"  ng-attr-data-dbentity="{{question.dbEntity}}" ng-attr-data-analyticsname="{{question.analyticsName}}" value="{{question.value}}">
+  </div>
+  <h3>Verification</h3>
+  <div ng-repeat="question in $ctrl.questions.sectionC">
+    <label>{{question.dbEntity}}</label>
+    <input id="{{question.dbEntity}}" class="regInput microToolInput"  ng-attr-data-dbentity="{{question.dbEntity}}" ng-attr-data-analyticsname="{{question.analyticsName}}" value="{{question.value}}">
+  </div>
+  <h3>Deployment</h3>
+  <div ng-repeat="question in $ctrl.questions.sectionC">
+    <label>{{question.dbEntity}}</label>
+    <input id="{{question.dbEntity}}" class="regInput microToolInput"  ng-attr-data-dbentity="{{question.dbEntity}}" ng-attr-data-analyticsname="{{question.analyticsName}}" value="{{question.value}}">
+  </div>
+</div>
