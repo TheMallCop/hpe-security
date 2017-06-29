@@ -4,8 +4,7 @@
     <div flex="nogrow">{{$ctrl.questionText}}</div>
   </div>
   <div class="options" flex="50" flex-offset-gt-sm="10">
-    <md-radio-group ng-model="ignored" ng-change="$ctrl.updateCtrl($ctrl.sectionIndex)" layout="row" layout-align="space-between" class="radioInput microToolInput" ng-attr-data-dbentity="{{$ctrl.dbEntity}}" ng-attr-data-analyticsname="{{$ctrl.analyticsName}}">
-
+    <md-radio-group ng-model="$ctrl.value" ng-change="$ctrl.updateCtrl($ctrl.sectionIndex)" layout="row" layout-align="space-between">
       <div class="options__single" layout="column">
         <div class="options__number">1</div>
         <md-radio-button value="1" aria-label="option number"></md-radio-button>

@@ -1,10 +1,6 @@
 import angular from 'angular';
 
-export class HorizontalStepComponent {
-	$onInit() {
-    console.log('Is step active?', this.activeStep);
-  }
-}
+export class HorizontalStepComponent {}
 
 export default angular.module('directives.horizontalStep', [])
   .component('horizontalStep', {
