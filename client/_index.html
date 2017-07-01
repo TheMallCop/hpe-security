@@ -27,10 +27,20 @@
     <div ui-view="" class="app" autoscroll="true"></div>
     <footer></footer>
     <script>
-      function msUpdateValue (field, value) {
-        console.log('change')
-        // angular.element(document.getElementById(field)).scope().$ctrl[field] = value;
-        // angular.element(document.getElementById(field)).scope().$apply()
+      function msUpdateInputs () {
+        var scope = angular.element(document.getElementById('shadow-form')).scope();
+        scope.$ctrl.questions.forEach((question) => {
+          question.value = document.getElementById(question.dbEntity).value;
+        });
+        scope.$apply();
+      }
+      function msUpdateOutputs () {
+        var scope = angular.element(document.getElementById('shadow-form')).scope();
+        scope.$ctrl.results.forEach((section) => {
+          section.score.value = document.getElementById(section.score.dbEntity).value;
+          section.average.value = document.getElementById(section.average.dbEntity).value;
+        });
+        scope.$apply();
       }
     </script>
 </body>

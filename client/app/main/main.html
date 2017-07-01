@@ -37,7 +37,7 @@
       </div>
     </horizontal-step>
   </horizontal-stepper>
-  <div id="shadow-form" style="display:none">
+  <div id="shadow-form" style="display:block">
     <h3>Governance</h3>
     <div ng-repeat="question in $ctrl.questions.sectionA">
       <label>{{question.dbEntity}}</label>
@@ -58,5 +58,6 @@
       <label>{{question.dbEntity}}</label>
       <input id="{{question.dbEntity}}" class="regInput microToolInput"  ng-attr-data-dbentity="{{question.dbEntity}}" ng-attr-data-analyticsname="{{question.analyticsName}}" value="{{question.value}}">
     </div>
+    <button id="msUpdateInputs" onclick="msUpdateInputs()">Update</button>
   </div>
 </section>
