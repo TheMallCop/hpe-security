@@ -13,11 +13,11 @@
           <p>Summary results indicate a relatively new maturity level when it comes to the focus area of Strategy and Metrics.</p>
         </div>
         <div flex flex-gt-sm="40" flex-offset-gt-sm="10" class="hpe-slider">
-          <div class="hpe-slider__benchmark-thumb" ng-attr-style="{{$ctrl.getAvgOffset($ctrl.governanceScore)}}">
+          <div class="hpe-slider__benchmark-thumb" ng-attr-style="{{$ctrl.getAvgOffset($ctrl.governanceAvg)}}">
             <span class="hpe-slider__benchmark-thumb__text">avg</span>
           </div>
           <md-slider-container>
-            <md-slider ng-model="$ctrl.governanceScore" step="1" max="10" aria-label="Governance" ng-readonly="$ctrl.readOnly" md-discrete ng-disabled="true"></md-slider>
+            <md-slider ng-model="$ctrl.governanceScore" step="1" max="10" aria-label="Governance" ng-readonly="true" md-discrete ng-disabled="true"></md-slider>
           </md-slider-container>
           <div class="hpe-slider__label" layout="row" layout-align="space-between">
             <div class="hpe-slider__label__min" flex>Less mature</div>
@@ -33,11 +33,11 @@
           <p>A relatively new maturity level in modeling application security threats</p>
         </div>
         <div flex flex-gt-sm="40" flex-offset-gt-sm="10" class="hpe-slider">
-          <div class="hpe-slider__benchmark-thumb" ng-attr-style="{{$ctrl.getAvgOffset(2)}}">
+          <div class="hpe-slider__benchmark-thumb" ng-attr-style="{{$ctrl.getAvgOffset($ctrl.constructionAvg)}}">
             <span class="hpe-slider__benchmark-thumb__text">avg</span>
           </div>
           <md-slider-container>
-            <md-slider ng-model="$ctrl.sliderScores.construction" step="1" max="10" aria-label="Construction" ng-readonly="$ctrl.readOnly" md-discrete ng-disabled="true"></md-slider>
+            <md-slider ng-model="$ctrl.constructionScore" step="1" max="10" aria-label="Construction" ng-readonly="true" md-discrete ng-disabled="true"></md-slider>
           </md-slider-container>
           <div class="hpe-slider__label" layout="row" layout-align="space-between">
             <div class="hpe-slider__label__min" flex>Less mature</div>
@@ -53,11 +53,11 @@
           <p>Across a sample of "big picture" security activities in development, your answers suggest a relatively low maturity level in the area of strategy and planning.</p>
         </div>
         <div flex flex-gt-sm="40" flex-offset-gt-sm="10" class="hpe-slider">
-          <div class="hpe-slider__benchmark-thumb" ng-attr-style="{{$ctrl.getAvgOffset(5)}}">
+          <div class="hpe-slider__benchmark-thumb" ng-attr-style="{{$ctrl.getAvgOffset($ctrl.verificationAvg)}}">
             <span class="hpe-slider__benchmark-thumb__text">avg</span>
           </div>
           <md-slider-container>
-            <md-slider ng-model="$ctrl.sliderScores.verification" step="1" max="10" aria-label="Verification" ng-readonly="$ctrl.readOnly" md-discrete ng-disabled="true"></md-slider>
+            <md-slider ng-model="$ctrl.verificationScore" step="1" max="10" aria-label="Verification" ng-readonly="true" md-discrete ng-disabled="true"></md-slider>
           </md-slider-container>
           <div class="hpe-slider__label" layout="row" layout-align="space-between">
             <div class="hpe-slider__label__min" flex>Less mature</div>
@@ -73,11 +73,11 @@
           <p>A relatively low level of maturity in the processes around Operational Enablement and Environment Hardening</p>
         </div>
         <div flex flex-gt-sm="40" flex-offset-gt-sm="10" class="hpe-slider">
-          <div class="hpe-slider__benchmark-thumb" ng-attr-style="{{$ctrl.getAvgOffset(6)}}">
+          <div class="hpe-slider__benchmark-thumb" ng-attr-style="{{$ctrl.getAvgOffset($ctrl.deploymentAvg)}}">
             <span class="hpe-slider__benchmark-thumb__text">avg</span>
           </div>
           <md-slider-container>
-            <md-slider ng-model="$ctrl.sliderScores.deployment" step="1" max="10" aria-label="Deployment" ng-readonly="$ctrl.readOnly" md-discrete ng-disabled="true"></md-slider>
+            <md-slider ng-model="$ctrl.deploymentScore" step="1" max="10" aria-label="Deployment" ng-readonly="true" md-discrete ng-disabled="true"></md-slider>
           </md-slider-container>
           <div class="hpe-slider__label" layout="row" layout-align="space-between">
             <div class="hpe-slider__label__min" flex>Less mature</div>
@@ -120,26 +120,18 @@
     </div>
   </div>
 </section>
-<div id="shadow-form" style="display:block">
+<div id="shadow-form">
   <h3>Governance</h3>
-  <!-- <mainstay-output></mainstay-output> -->
-  <div>
-    <label>Score</label>
-    <input id="governance-score" class="regOutput microToolInput"  ng-attr-data-dbentity="governanceScore" ng-attr-data-analyticsname="Governance Score" value="7" ng-model="$ctrl.governanceScore" ng-change="$ctrl.alert()">
-  </div>
+  <input id="governanceScore" class="regOutput microToolInput"  ng-attr-data-dbentity="governanceScore" ng-attr-data-analyticsname="Governance Score" ng-model="$ctrl.governanceScore">
+  <input id="governanceAvg" class="regOutput microToolInput"  ng-attr-data-dbentity="governanceAvg" ng-attr-data-analyticsname="Average Governance Score" ng-model="$ctrl.governanceAvg">
   <h3>Construction</h3>
-  <div ng-repeat="question in $ctrl.questions.sectionB">
-    <label>{{question.dbEntity}}</label>
-    <input id="{{question.dbEntity}}" class="regInput microToolInput"  ng-attr-data-dbentity="{{question.dbEntity}}" ng-attr-data-analyticsname="{{question.analyticsName}}" value="{{question.value}}">
-  </div>
+  <input id="constructionScore" class="regOutput microToolInput"  ng-attr-data-dbentity="constructionScore" ng-attr-data-analyticsname="Construction Score" ng-model="$ctrl.constructionScore">
+  <input id="constructionAvg" class="regOutput microToolInput"  ng-attr-data-dbentity="constructionAvg" ng-attr-data-analyticsname="Average Construction Score" ng-model="$ctrl.constructionAvg">
   <h3>Verification</h3>
-  <div ng-repeat="question in $ctrl.questions.sectionC">
-    <label>{{question.dbEntity}}</label>
-    <input id="{{question.dbEntity}}" class="regInput microToolInput"  ng-attr-data-dbentity="{{question.dbEntity}}" ng-attr-data-analyticsname="{{question.analyticsName}}" value="{{question.value}}">
-  </div>
+  <input id="verificationScore" class="regOutput microToolInput"  ng-attr-data-dbentity="verificationScore" ng-attr-data-analyticsname="Verification Score" value="7" ng-model="$ctrl.verificationScore">
+  <input id="verificationAvg" class="regOutput microToolInput"  ng-attr-data-dbentity="verificationAvg" ng-attr-data-analyticsname="Average Verification Score" ng-model="$ctrl.verificationAvg">
   <h3>Deployment</h3>
-  <div ng-repeat="question in $ctrl.questions.sectionC">
-    <label>{{question.dbEntity}}</label>
-    <input id="{{question.dbEntity}}" class="regInput microToolInput"  ng-attr-data-dbentity="{{question.dbEntity}}" ng-attr-data-analyticsname="{{question.analyticsName}}" value="{{question.value}}">
-  </div>
+  <input id="deploymentScore" class="regOutput microToolInput"  ng-attr-data-dbentity="deploymentScore" ng-attr-data-analyticsname="Deployment Score" value="7" ng-model="$ctrl.deploymentScore">
+  <input id="deploymentAvg" class="regOutput microToolInput"  ng-attr-data-dbentity="deploymentAvg" ng-attr-data-analyticsname="Average Deployment Score" ng-model="$ctrl.deploymentAvg">
 </div>
+<button id="button" ng-click="$ctrl.msUpdateValue()">Change</button>

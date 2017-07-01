@@ -26,5 +26,12 @@
 
     <div ui-view="" class="app" autoscroll="true"></div>
     <footer></footer>
+    <script>
+      function msUpdateValue (field, value) {
+        console.log('change')
+        // angular.element(document.getElementById(field)).scope().$ctrl[field] = value;
+        // angular.element(document.getElementById(field)).scope().$apply()
+      }
+    </script>
 </body>
 </html>
