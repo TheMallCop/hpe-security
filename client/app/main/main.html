@@ -37,41 +37,21 @@
       </div>
     </horizontal-step>
   </horizontal-stepper>
-  <div id="shadow-form" style="display:block">
-    <div ng-repeat="step in $ctrl.steps">
-      <h3>{{step.name}}</h3>
-      <div ng-repeat="question in step.questions">
-        <label>Question {{question.number}}</label>
-        <input
-          type="text" 
-          class="regInput microToolInput"
-          id="{{question.dbEntity}}"
-          data-dbentity="{{question.dbEntity}}"
-          data-analyticsname="{{question.analyticsName}}" 
-          ng-model="question.value"
-          >
-      </div>
-    </div>
-    <!-- <h3>Governance</h3>
-    <div ng-repeat="question in $ctrl.questions.sectionA">
-      <label>{{question.dbEntity}}</label>
-      <input id="{{question.dbEntity}}" class="regInput microToolInput"  ng-attr-data-dbentity="{{question.dbEntity}}" ng-attr-data-analyticsname="{{question.analyticsName}}" value="{{question.value}}">
-    </div>
-    <h3>Construction</h3>
-    <div ng-repeat="question in $ctrl.questions.sectionB">
-      <label>{{question.dbEntity}}</label>
-      <input id="{{question.dbEntity}}" class="regInput microToolInput"  ng-attr-data-dbentity="{{question.dbEntity}}" ng-attr-data-analyticsname="{{question.analyticsName}}" value="{{question.value}}">
-    </div>
-    <h3>Verification</h3>
-    <div ng-repeat="question in $ctrl.questions.sectionC">
-      <label>{{question.dbEntity}}</label>
-      <input id="{{question.dbEntity}}" class="regInput microToolInput"  ng-attr-data-dbentity="{{question.dbEntity}}" ng-attr-data-analyticsname="{{question.analyticsName}}" value="{{question.value}}">
-    </div>
-    <h3>Deployment</h3>
-    <div ng-repeat="question in $ctrl.questions.sectionD">
-      <label>{{question.dbEntity}}</label>
-      <input id="{{question.dbEntity}}" class="regInput microToolInput"  ng-attr-data-dbentity="{{question.dbEntity}}" ng-attr-data-analyticsname="{{question.analyticsName}}" value="{{question.value}}">
-    </div> -->
-    <button id="msUpdateInputs" onclick="msUpdateInputs()">Update</button>
-  </div>
 </section>
+<div id="shadow-form" style="display:none">
+  <div ng-repeat="step in $ctrl.steps">
+    <h3>{{step.name}}</h3>
+    <div ng-repeat="question in step.questions">
+      <label>Question {{question.number}}</label>
+      <input
+        type="text" 
+        class="regInput microToolInput"
+        id="{{question.dbEntity}}"
+        data-dbentity="{{question.dbEntity}}"
+        data-analyticsname="{{question.analyticsName}}" 
+        ng-model="question.value"
+        >
+    </div>
+  </div>
+  <button id="msUpdateInputs" onclick="msUpdateInputs()">Update</button>
+</div>
