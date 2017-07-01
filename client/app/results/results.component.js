@@ -9,51 +9,51 @@ export class ResultsController {
         name: 'Governance',
         score: {
           dbEntity: 'governanceScore',
-          analyticsName: 'Governance Score'
+          analyticsName: 'Governance Score',
           value: 0
-        }
+        },
         average: {
           dbEntity: 'governanceAvg',
-          analyticsName: 'Governance Average Score'
+          analyticsName: 'Governance Average Score',
           value: 0
         }
       }, {
         name: 'Construction',
         score: {
           dbEntity: 'constructionScore',
-          analyticsName: 'Construction Score'
+          analyticsName: 'Construction Score',
           value: 0
-        }
+        },
         average: {
           dbEntity: 'constructionAvg',
-          analyticsName: 'Construction Average Score'
+          analyticsName: 'Construction Average Score',
           value: 0
         }
       }, {
         name: 'Verification',
         score: {
           dbEntity: 'verificationScore',
-          analyticsName: 'Verification Score'
+          analyticsName: 'Verification Score',
           value: 0
-        }
+        },
         average: {
           dbEntity: 'verificationAvg',
-          analyticsName: 'Verification Average Score'
+          analyticsName: 'Verification Average Score',
           value: 0
         }
       }, {
         name: 'Deployment',
         score: {
           dbEntity: 'deploymentScore',
-          analyticsName: 'Deployment Score'
+          analyticsName: 'Deployment Score',
           value: 0
-        }
+        },
         average: {
           dbEntity: 'deploymentAvg',
-          analyticsName: 'Deployment Average Score'
+          analyticsName: 'Deployment Average Score',
           value: 0
         }
-      },
+      }
     ];
     this.readOnly = true;
     this.getAvgOffset = (score) => {
