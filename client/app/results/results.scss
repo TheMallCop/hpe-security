@@ -25,6 +25,10 @@ md-slider[disabled][readonly] .md-sign {
 .hpe-slider {
   margin-top: 2em;
   position: relative;
+  md-slider {
+    margin-left: 0;
+    margin-right: 0;
+  }
   &__label {
     font-weight: $font__weight--bold;
     color: $palette--gray;

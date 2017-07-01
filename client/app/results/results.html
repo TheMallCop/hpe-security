@@ -6,18 +6,18 @@
   <h2>Result summary</h2>
   <p>Etiam eleifend erat ligula. Duis interdum mauris ac elit egestas, quis mattis nisi lacinia.</p>
   <div class="results-breakdown">
-    <div class="results-breakdown__section">
-      <h3>Governance</h3>
+    <div class="results-breakdown__section" ng-repeat="result in $ctrl.results">
+      <h3>{{result.name}}</h3>
       <div layout-gt-sm="row" layout="column">
         <div flex="40">
-          <p>Summary results indicate a relatively new maturity level when it comes to the focus area of Strategy and Metrics.</p>
+          <p class="regOutput microToolInput" ng-attr-data-dbentity="{{result.name + 'Description'}}">Summary results indicate a relatively new maturity level when it comes to the focus area of Strategy and Metrics.</p>
         </div>
         <div flex flex-gt-sm="40" flex-offset-gt-sm="10" class="hpe-slider">
-          <div class="hpe-slider__benchmark-thumb" ng-attr-style="{{$ctrl.getAvgOffset($ctrl.governanceAvg)}}">
+          <div class="hpe-slider__benchmark-thumb" ng-attr-style="{{$ctrl.getAvgOffset(result.average.value)}}">
             <span class="hpe-slider__benchmark-thumb__text">avg</span>
           </div>
           <md-slider-container>
-            <md-slider ng-model="$ctrl.governanceScore" step="1" max="10" aria-label="Governance" ng-readonly="true" md-discrete ng-disabled="true"></md-slider>
+            <md-slider ng-model="result.score.value" step="1" max="10" aria-label="Governance" ng-readonly="true" md-discrete ng-disabled="true"></md-slider>
           </md-slider-container>
           <div class="hpe-slider__label" layout="row" layout-align="space-between">
             <div class="hpe-slider__label__min" flex>Less mature</div>
@@ -61,7 +61,14 @@
   </div>
 </section>
 <div id="shadow-form">
-  <h3>Governance</h3>
+  <div ng-repeat="result in $ctrl.results">
+    <h3>{{result.name}}</h3>
+    <div>
+      <label></label>
+      <input type="text" class="regOutput microToolInput" ng-attr-data-dbentity="{{result.score.dbEntity}}" ng-attr-data-analyticsname="{{results.score.analyticsName}}" ng-model="result.score.value">
+    </div>
+  </div>
+  <!-- <h3>Governance</h3>
   <input id="governanceScore" class="regOutput microToolInput"  ng-attr-data-dbentity="governanceScore" ng-attr-data-analyticsname="Governance Score" ng-model="$ctrl.governanceScore">
   <input id="governanceAvg" class="regOutput microToolInput"  ng-attr-data-dbentity="governanceAvg" ng-attr-data-analyticsname="Average Governance Score" ng-model="$ctrl.governanceAvg">
   <h3>Construction</h3>
@@ -72,6 +79,6 @@
   <input id="verificationAvg" class="regOutput microToolInput"  ng-attr-data-dbentity="verificationAvg" ng-attr-data-analyticsname="Average Verification Score" ng-model="$ctrl.verificationAvg">
   <h3>Deployment</h3>
   <input id="deploymentScore" class="regOutput microToolInput"  ng-attr-data-dbentity="deploymentScore" ng-attr-data-analyticsname="Deployment Score" value="7" ng-model="$ctrl.deploymentScore">
-  <input id="deploymentAvg" class="regOutput microToolInput"  ng-attr-data-dbentity="deploymentAvg" ng-attr-data-analyticsname="Average Deployment Score" ng-model="$ctrl.deploymentAvg">
+  <input id="deploymentAvg" class="regOutput microToolInput"  ng-attr-data-dbentity="deploymentAvg" ng-attr-data-analyticsname="Average Deployment Score" ng-model="$ctrl.deploymentAvg"> -->
 </div>
 <button id="button" ng-click="$ctrl.msUpdateValue()">Change</button>
