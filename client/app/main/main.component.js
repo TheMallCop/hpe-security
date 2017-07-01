@@ -19,58 +19,8 @@ export class MainController {
         name: 'Governance',
         complete: false,
         active: true,
-        description: 'Etiam eget est eu ligula iaculis varius. Donec nec dui facilisis lectus malesuada vehicula eu a neque. Sed vel lacus non erat bibendum accumsan. Suspendisse potenti. Phasellus in turpis sit amet neque feugiat pellentesque. Nulla varius mi ut nisl tincidunt, sit amet faucibus augue volutpat.'
-      }, {
-        label: 'B',
-        name: 'Construction',
-        complete: false,
-        active: false,
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra odio vel nisl maximus pretium. Proin felis lectus, posuere eget neque in, facilisis maximus lectus. Nulla molestie nunc nibh, et commodo turpis lobortis nec.'
-      }, {
-        label: 'C',
-        name: 'Verification',
-        complete: false,
-        active: false,
-        description: 'Nulla eleifend, nunc eget mattis tristique, libero nibh porttitor lectus, a semper nisl nisi vitae sem. Morbi convallis congue lobortis. Vestibulum id tempus velit. Maecenas at semper dolor, non sollicitudin tortor.'
-      }, {
-        label: 'D',
-        name: 'Deployment',
-        complete: false,
-        active: false,
-        description: 'Phasellus tincidunt consequat dolor, in tincidunt nisi fringilla nec. Vivamus vitae nisl ut urna pulvinar vestibulum et eu orci. Phasellus nec nisi a odio mollis blandit ac ac tortor. Praesent bibendum, mauris eu porttitor semper, dolor ante viverra elit, vitae pellentesque est nibh vitae orci.'
-      }
-    ];
-    this.nextStep = () => {
-      var nextStep = false;
-      this.steps.forEach((step, index) => {
-        if (step.active && !nextStep) {
-          if (index === this.steps.length -1) {
-            this.$state.go('results');
-            return;
-          }
-          step.active = false;
-          step.complete = true;
-          nextStep = index + 1;
-          this.steps[nextStep].active = true;
-        }
-      })
-      scrollToTop();
-    };
-    this.previousStep = () => {
-      var previousStep = false;
-      this.steps.forEach((step, index) => {
-        if (step.active && !previousStep) {
-          step.active = false;
-          previousStep = index - 1;
-          this.steps[previousStep].active = true;
-          this.steps[previousStep].complete = false;
-        }
-      })
-      scrollToTop();
-    };
-    this.questions = {
-      sectionA: [
-        {
+        description: 'Etiam eget est eu ligula iaculis varius. Donec nec dui facilisis lectus malesuada vehicula eu a neque. Sed vel lacus non erat bibendum accumsan. Suspendisse potenti. Phasellus in turpis sit amet neque feugiat pellentesque. Nulla varius mi ut nisl tincidunt, sit amet faucibus augue volutpat.',
+        questions: [{
           number: 1,
           content: 'We have completed an inventory of our software portfolio (including in-house development, COTS, third-party development, etc.)',
           dbEntity: 'hpeQuestion1',
@@ -118,10 +68,14 @@ export class MainController {
           dbEntity: 'hpeQuestion8',
           analyticsName: 'Question 8',
           responded: false
-        }
-      ], 
-      sectionB: [
-        {
+        }]
+      }, {
+        label: 'B',
+        name: 'Construction',
+        complete: false,
+        active: false,
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra odio vel nisl maximus pretium. Proin felis lectus, posuere eget neque in, facilisis maximus lectus. Nulla molestie nunc nibh, et commodo turpis lobortis nec.',
+        questions: [{
           number: 9,
           content: 'Secure frameworks and design features are considered during the design process',
           dbEntity: 'hpeQuestion9',
@@ -145,10 +99,14 @@ export class MainController {
           dbEntity: 'hpeQuestion12',
           analyticsName: 'Question 12',
           responded: false
-        }
-      ], 
-      sectionC: [
-        {
+        }],
+      }, {
+        label: 'C',
+        name: 'Verification',
+        complete: false,
+        active: false,
+        description: 'Nulla eleifend, nunc eget mattis tristique, libero nibh porttitor lectus, a semper nisl nisi vitae sem. Morbi convallis congue lobortis. Vestibulum id tempus velit. Maecenas at semper dolor, non sollicitudin tortor.',
+        questions: [{
           number: 13,
           content: 'We conduct regular secure code reviews',
           dbEntity: 'hpeQuestion13',
@@ -190,10 +148,14 @@ export class MainController {
           dbEntity: 'hpeQuestion19',
           analyticsName: 'Question 19',
           responded: false
-        }
-      ], 
-      sectionD: [
-        {
+        }]
+      }, {
+        label: 'D',
+        name: 'Deployment',
+        complete: false,
+        active: false,
+        description: 'Phasellus tincidunt consequat dolor, in tincidunt nisi fringilla nec. Vivamus vitae nisl ut urna pulvinar vestibulum et eu orci. Phasellus nec nisi a odio mollis blandit ac ac tortor. Praesent bibendum, mauris eu porttitor semper, dolor ante viverra elit, vitae pellentesque est nibh vitae orci.',
+        questions: [{
           number: 20,
           content: 'In addition to our app security testing program, we wrap additional protection around  high-risk applications',
           dbEntity: 'hpeQuestion20',
@@ -211,12 +173,40 @@ export class MainController {
           dbEntity: 'hpeQuestion22',
           analyticsName: 'Question 22',
           responded: false
+        }]
+      }
+    ];
+    this.nextStep = () => {
+      var nextStep = false;
+      this.steps.forEach((step, index) => {
+        if (step.active && !nextStep) {
+          if (index === this.steps.length -1) {
+            this.$state.go('results');
+            return;
+          }
+          step.active = false;
+          step.complete = true;
+          nextStep = index + 1;
+          this.steps[nextStep].active = true;
         }
-      ]
+      })
+      scrollToTop();
     };
-    this.isSectionIncomplete = (sectionLabel) => {
+    this.previousStep = () => {
+      var previousStep = false;
+      this.steps.forEach((step, index) => {
+        if (step.active && !previousStep) {
+          step.active = false;
+          previousStep = index - 1;
+          this.steps[previousStep].active = true;
+          this.steps[previousStep].complete = false;
+        }
+      })
+      scrollToTop();
+    };
+    this.isSectionIncomplete = (questions) => {
       var isIncomplete = false;
-      this.questions['section' + sectionLabel].forEach((question) => {
+      questions.forEach((question) => {
         if (question.responded === false) {
           isIncomplete = true;
         }

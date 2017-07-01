@@ -21,18 +21,18 @@
           </div>
         </div>
         <div class="questions">
-          <question ng-repeat="question in $ctrl.questions['section' + step.label]" section-responses="$ctrl.questions['section' + step.label]" section-index="{{$index}}" question-number="{{question.number}}" question-text="{{question.content}}"></question>
+          <question ng-repeat="question in step.questions" section-responses="step.questions" section-index="{{$index}}" question-number="{{question.number}}" question-text="{{question.content}}"></question>
         </div>
         <div class="hpe-step__actions" layout="row" layout-align="end">
           <md-button class="md-raised" ng-hide="$first" ng-click="$ctrl.previousStep();" aria-label="continue">
             Back
           </md-button>
-          <md-button class="md-accent md-raised" ng-disabled="$ctrl.isSectionIncomplete(step.label);" ng-click="$ctrl.nextStep();" aria-label="continue">
+          <md-button class="md-accent md-raised" ng-disabled="$ctrl.isSectionIncomplete(step.questions);" ng-click="$ctrl.nextStep();" aria-label="continue">
             Continue
           </md-button>
         </div>
         <div layout="row" layout-align="end" class="hpe-step__actions">
-          <em ng-show="$ctrl.isSectionIncomplete(step.label);"><i class="fa fa-info-circle"></i> Complete all questions in this section to continue</em>
+          <em ng-show="$ctrl.isSectionIncomplete(step.questions);"><i class="fa fa-info-circle"></i> Complete all questions in this section to continue</em>
         </div>
       </div>
     </horizontal-step>
