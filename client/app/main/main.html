@@ -21,7 +21,7 @@
           </div>
         </div>
         <div class="questions">
-          <question ng-repeat="question in step.questions" section-responses="step.questions" section-index="{{$index}}" question-number="{{question.number}}" question-text="{{question.content}}"></question>
+          <question ng-repeat="question in step.questions" question="question"></question>
         </div>
         <div class="hpe-step__actions" layout="row" layout-align="end">
           <md-button class="md-raised" ng-hide="$first" ng-click="$ctrl.previousStep();" aria-label="continue">
@@ -38,7 +38,21 @@
     </horizontal-step>
   </horizontal-stepper>
   <div id="shadow-form" style="display:block">
-    <h3>Governance</h3>
+    <div ng-repeat="step in $ctrl.steps">
+      <h3>{{step.name}}</h3>
+      <div ng-repeat="question in step.questions">
+        <label>Question {{question.number}}</label>
+        <input
+          type="text" 
+          class="regInput microToolInput"
+          id="{{question.dbEntity}}"
+          data-dbentity="{{question.dbEntity}}"
+          data-analyticsname="{{question.analyticsName}}" 
+          ng-model="question.value"
+          >
+      </div>
+    </div>
+    <!-- <h3>Governance</h3>
     <div ng-repeat="question in $ctrl.questions.sectionA">
       <label>{{question.dbEntity}}</label>
       <input id="{{question.dbEntity}}" class="regInput microToolInput"  ng-attr-data-dbentity="{{question.dbEntity}}" ng-attr-data-analyticsname="{{question.analyticsName}}" value="{{question.value}}">
@@ -57,7 +71,7 @@
     <div ng-repeat="question in $ctrl.questions.sectionD">
       <label>{{question.dbEntity}}</label>
       <input id="{{question.dbEntity}}" class="regInput microToolInput"  ng-attr-data-dbentity="{{question.dbEntity}}" ng-attr-data-analyticsname="{{question.analyticsName}}" value="{{question.value}}">
-    </div>
+    </div> -->
     <button id="msUpdateInputs" onclick="msUpdateInputs()">Update</button>
   </div>
 </section>

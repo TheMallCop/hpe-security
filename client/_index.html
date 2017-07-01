@@ -29,8 +29,10 @@
     <script>
       function msUpdateInputs () {
         var scope = angular.element(document.getElementById('shadow-form')).scope();
-        scope.$ctrl.questions.forEach((question) => {
-          question.value = document.getElementById(question.dbEntity).value;
+        scope.$ctrl.steps.forEach((step) => {
+          step.questions.forEach((question) => {
+            question.value = document.getElementById(question.dbEntity).value;
+          });
         });
         scope.$apply();
       }

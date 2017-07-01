@@ -1,10 +1,10 @@
 <div layout-gt-sm="row" layout="column" class="question" layout-align="space-between">
   <div class="question__text" flex="40" layout="row">
-    <div flex="nogrow" class="question__text__number">{{$ctrl.questionNumber}}.</div>
-    <div flex="nogrow">{{$ctrl.questionText}}</div>
+    <div flex="nogrow" class="question__text__number">{{$ctrl.question.number}}.</div>
+    <div flex="nogrow">{{$ctrl.question.content}}</div>
   </div>
   <div class="options" flex="50" flex-offset-gt-sm="10">
-    <md-radio-group ng-model="$ctrl.value" ng-change="$ctrl.updateCtrl($ctrl.sectionIndex)" layout="row" layout-align="space-between">
+    <md-radio-group ng-model="$ctrl.question.value" layout="row" layout-align="space-between">
       <div class="options__single" layout="column">
         <div class="options__number">1</div>
         <md-radio-button value="1" aria-label="option number"></md-radio-button>
