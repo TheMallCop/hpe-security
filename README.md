@@ -22,4 +22,17 @@ Run 'gulp serve:dist' to run production code (stored in _dist/_ directory)
 
 ## Build for production
 
-Run `gulp build` for building production-ready code, packaged inside of the _dist/_ directory
+Run `gulp build` for building production-ready code that will run on NodeJS, packaged inside of the _dist/_ directory. If you only want the client files and run the app on your own web server, use the _dist/client_ directory.
+
+## Mainstay Data I/O
+
+Inputs and outputs can be accessed inside a hidden form with an ID of `shadow-form` of their corresponding pages (index page and results page). Question data, along with their dbEntity and dbAnalyticsName values can be altered in `main.component.js`. The UI will adjust to display data as outlined in the `steps` object. Conversely, result data is contained in the `results.component.js` file.
+
+### Inputs
+
+Inputs can be updated by triggering a click event in the `#msUpdateInputs` element of the `#shadow-form`.
+
+
+### Outputs
+
+Outputs can be updated by triggering a click event in the `#msUpdateInputs` element of the `#shadow-form`.
