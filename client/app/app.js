@@ -29,7 +29,6 @@ angular.module('hpeSecurityApp', [ngCookies, ngResource, ngSanitize,
 	uiRouter, ngAnimate, ngMaterial, constants, util,
 	main, results, header, footer, question, 
 	stepper, step, horizontalStepper, horizontalStep,
-	// mainstayOutput
 ])
   .config(routeConfig);
 
