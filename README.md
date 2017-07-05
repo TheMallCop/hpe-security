@@ -26,7 +26,7 @@ Run `gulp build` for building production-ready code that will run on NodeJS, pac
 
 ## Mainstay Data I/O
 
-Inputs and outputs can be accessed inside a hidden form with an ID of `shadow-form` of their corresponding pages (index page and results page). Question data, along with their dbEntity and dbAnalyticsName values can be altered in `main.component.js`. The UI will adjust to display data as outlined in the `steps` object. Conversely, result data is contained in the `results.component.js` file.
+Inputs and outputs can be accessed inside a hidden form with an ID of `shadow-form` on their corresponding pages (index page and results page respectively). Question data, along with their dbEntity and dbAnalyticsName values can be altered in `main.component.js`. The UI will adjust to display data as outlined in the `steps` object. Conversely, result data is contained in `results` object of the `results.component.js` file.
 
 ### Inputs
 
