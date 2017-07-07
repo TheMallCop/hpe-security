@@ -1,7 +1,11 @@
 import angular from 'angular';
 
 export class QuestionComponent {
-	$onInit() {}
+	$onInit() {
+		this.updateInputs = (values) => {
+			console.log('Values are now', values);
+		}
+	}
 }
 
 export default angular.module('directives.question', [])

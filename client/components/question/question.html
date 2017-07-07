@@ -4,7 +4,7 @@
     <div flex="nogrow">{{$ctrl.question.content}}</div>
   </div>
   <div class="options" flex="50" flex-offset-gt-sm="10">
-    <md-radio-group ng-model="$ctrl.question.value" layout="row" layout-align="space-between">
+    <md-radio-group ng-model="$ctrl.question.value" layout="row" layout-align="space-between" ng-change="$ctrl.updateInputs($ctrl.question.value)">
       <div class="options__single" layout="column">
         <div class="options__number">1</div>
         <md-radio-button value="1" aria-label="option number"></md-radio-button>
