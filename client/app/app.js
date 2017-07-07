@@ -21,7 +21,6 @@ import stepper from '../components/stepper/stepper.component';
 import step from '../components/stepper/step/step.component';
 import horizontalStepper from '../components/horizontal-stepper/horizontal-stepper.component';
 import horizontalStep from '../components/horizontal-stepper/horizontal-step/horizontal-step.component';
-// import mainstayOutput from '../components/mainstay-output/mainstay-output.directive';
 
 import './app.scss';
 

@@ -30,8 +30,7 @@ const paths = {
         images: `${clientPath}/assets/images/**/*`,
         revManifest: `${clientPath}/assets/rev-manifest.json`,
         scripts: [
-            `${clientPath}/**/!(*.spec|*.mock).js`,
-            `${clientPath}/**/!(*.spec|*.mock).js\?seed\=1`
+            `${clientPath}/**/!(*.spec|*.mock).js`
         ],
         styles: [`${clientPath}/{app,components}/**/*.scss`],
         mainStyle: `${clientPath}/app/app.scss`,
