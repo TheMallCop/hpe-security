@@ -23,8 +23,6 @@ import horizontalStepper from '../components/horizontal-stepper/horizontal-stepp
 import horizontalStep from '../components/horizontal-stepper/horizontal-step/horizontal-step.component';
 import mainstay from './mainstay-scripts/mainstay.js';
 
-console.log('Mainstay scripts', mainstay);
-
 import './app.scss';
 
 angular.module('hpeSecurityApp', [ngCookies, ngResource, ngSanitize, 
@@ -32,7 +30,8 @@ angular.module('hpeSecurityApp', [ngCookies, ngResource, ngSanitize,
 	main, results, header, footer, question, 
 	stepper, step, horizontalStepper, horizontalStep,
 ])
-  .config(routeConfig);
+  .config(routeConfig)
+  .run(mainstay());
 
 angular.element(document)
   .ready(() => {
