@@ -5,7 +5,7 @@ export class QuestionComponent {
 		this.updateInputs = (value) => {
 			console.log('Values are now', value);
       this.question.value = value;
-      angular.element(document.getElementById(this.question.dbEntity)).triggerHandler('change')
+      $('#' + this.question.dbEntity).val(this.question.value).trigger('change');
 		}
 	}
 }

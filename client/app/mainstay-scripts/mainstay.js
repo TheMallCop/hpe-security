@@ -1,7 +1,10 @@
+import jQuery from "jquery";
+window.$ = window.jQuery = jQuery;
+
 function mainstay () {
 	console.log('Mainstay is here!');
-	// $('hpeQuestion8').on('change', function () {
-	// 	console.log('Question 8 was changed');
-	// });
+	$( "#hpeQuestion1" ).change(function() {
+	  console.log( "Handler for .change() called from mainstay." );
+	});
 }
 export default mainstay;
