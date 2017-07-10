@@ -4,25 +4,25 @@
     <div flex="nogrow">{{$ctrl.question.content}}</div>
   </div>
   <div class="options" flex="50" flex-offset-gt-sm="10">
-    <md-radio-group ng-model="$ctrl.question.value" layout="row" layout-align="space-between" ng-change="$ctrl.updateInputs($ctrl.question.value)">
+    <md-radio-group ng-model="$ctrl.question.value" layout="row" layout-align="space-between">
       <div class="options__single" layout="column">
         <div class="options__number">1</div>
-        <md-radio-button value="1" aria-label="option number"></md-radio-button>
+        <md-radio-button value="1" aria-label="option number 1" ng-click="$ctrl.updateInputs(1)""></md-radio-button>
       </div>
 
       <div class="options__single" layout="column">
         <div class="options__number">2</div>
-        <md-radio-button value="2" aria-label="option number"></md-radio-button>
+        <md-radio-button value="2" aria-label="option number 2" ng-click="$ctrl.updateInputs(2)""></md-radio-button>
       </div>
 
       <div class="options__single" layout="column">
         <div class="options__number">3</div>
-        <md-radio-button value="3" aria-label="option number"></md-radio-button>
+        <md-radio-button value="3" aria-label="option number 3" ng-click="$ctrl.updateInputs(3)""></md-radio-button>
       </div>
 
       <div class="options__single" layout="column">
         <div class="options__number">4</div>
-        <md-radio-button value="4" aria-label="option number"></md-radio-button>
+        <md-radio-button value="4" aria-label="option number 4" ng-click="$ctrl.updateInputs(4)""></md-radio-button>
       </div>
 
     </md-radio-group>

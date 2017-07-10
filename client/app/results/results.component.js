@@ -2,7 +2,7 @@ import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import routing from './results.routes';
 
-export class ResultsController {
+export class ResultsCtrl {
   $onInit() {
     this.results = [
       {
@@ -67,7 +67,7 @@ export default angular.module('hpeSecurityApp.results', [uiRouter])
   .config(routing)
   .component('results', {
     template: require('./results.html'),
-    controller: ResultsController,
+    controller: ResultsCtrl,
     controllerAs: '$ctrl'
   })
   .name;

@@ -2,8 +2,10 @@ import angular from 'angular';
 
 export class QuestionComponent {
 	$onInit() {
-		this.updateInputs = (values) => {
-			console.log('Values are now', values);
+		this.updateInputs = (value) => {
+			console.log('Values are now', value);
+      this.question.value = value;
+      angular.element(document.getElementById(this.question.dbEntity)).triggerHandler('change')
 		}
 	}
 }
