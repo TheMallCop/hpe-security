@@ -3,7 +3,8 @@ import uiRouter from 'angular-ui-router';
 import routing from './main.routes';
 
 export class MainController {
-  constructor($state, $location, $anchorScroll) {
+
+    constructor($state, $location, $anchorScroll) {
     this.$state = $state;
     this.$location = $location;
     this.$anchorScroll = $anchorScroll;
@@ -11,8 +12,9 @@ export class MainController {
   $onInit() {
     microTool.util.init();
     if (this.$state.params.reg) {
-      this.$state.go('results', {reg: true});
+      this.$state.go('results', {reg: 1});
     }
+
     var scrollToTop = () => {
       this.$location.hash('stepper');
       this.$anchorScroll();
