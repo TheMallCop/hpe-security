@@ -3,7 +3,11 @@ import uiRouter from 'angular-ui-router';
 import routing from './results.routes';
 
 export class ResultsCtrl {
+  constructor($state) {
+    this.$state = $state;
+  }
   $onInit() {
+    
     this.results = [
       {
         name: 'Governance',
@@ -60,8 +64,12 @@ export class ResultsCtrl {
       var offset = score * 10;
       return 'left: ' + offset + '%;';
     };
+    if (this.$state.params.reg) {
+      this.isRegistered = true;
+    }
   }
 }
+ResultsCtrl.$inject = ['$state'];
 
 export default angular.module('hpeSecurityApp.results', [uiRouter])
   .config(routing)

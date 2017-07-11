@@ -3,7 +3,6 @@ import angular from 'angular';
 export class QuestionComponent {
 	$onInit() {
 		this.updateInputs = (value) => {
-			console.log('Values are now', value);
       this.question.value = value;
       $('#' + this.question.dbEntity).val(this.question.value).trigger('change');
 		}

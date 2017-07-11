@@ -9,13 +9,13 @@ export class MainController {
     this.$anchorScroll = $anchorScroll;
   }
   $onInit() {
+    if (this.$state.params.reg) {
+      this.$state.go('results', {reg: true});
+    }
     var scrollToTop = () => {
       this.$location.hash('stepper');
       this.$anchorScroll();
     };
-    if (this.$state.params.reg) {
-      this.$state.go('results');
-    }
     this.steps = [
       {
         label: 'A',

@@ -3,7 +3,7 @@
 export default function routes($stateProvider) {
   'ngInject';
 
-  $stateProvider.state('main:reg', {
+  $stateProvider.state('main', {
     url: '/?reg',
     template: '<main></main>'
   });
