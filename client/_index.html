@@ -221,6 +221,16 @@
         data-analyticsname="Question 21" 
       >
     </div>
+    <div>
+      <label>Question 22</label>
+      <input
+        type="text" 
+        class="regInput microToolInput"
+        id="hpeQuestion22"
+        data-dbentity="hpeQuestion22"
+        data-analyticsname="Question 22" 
+      >
+    </div>
     <button id="msUpdateInputs" onclick="msUpdateInputs()">Update</button>
   </div>
 
@@ -269,7 +279,7 @@
       <footer></footer>
       <script>
         function msUpdateInputs () {
-          var scope = angular.element(document.getElementById('shadow-form')).scope();
+          var scope = angular.element(document.getElementById('mainCtrl')).scope();
           scope.$ctrl.steps.forEach((step) => {
             step.questions.forEach((question) => {
               question.value = document.getElementById(question.dbEntity).value;
