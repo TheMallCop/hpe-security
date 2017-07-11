@@ -9,6 +9,7 @@ export class MainController {
     this.$anchorScroll = $anchorScroll;
   }
   $onInit() {
+    microTool.util.init();
     if (this.$state.params.reg) {
       this.$state.go('results', {reg: true});
     }
