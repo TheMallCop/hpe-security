@@ -32,7 +32,7 @@ angular.module('hpeSecurityApp', [ngCookies, ngResource, ngSanitize,
 	stepper, step, horizontalStepper, horizontalStep,
 ])
   .config(routeConfig)
-  .run(mainstay());
+  .run();
 
 angular.element(document)
   .ready(() => {
