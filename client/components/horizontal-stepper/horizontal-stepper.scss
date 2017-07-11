@@ -2,7 +2,7 @@
 	&__header {
 		padding: 1em 1em;
 		border-bottom: thin solid $palette--light-gray;
-		overflow-x: scroll;
+		overflow-x: auto;
 	}
 	&__line {
     border-bottom: thin solid $palette--light-gray;

@@ -27,7 +27,7 @@
           <md-button class="md-raised" ng-hide="$first" ng-click="$ctrl.previousStep();" aria-label="continue">
             Back
           </md-button>
-          <md-button class="md-accent md-raised" ng-disabled="$ctrl.isSectionIncomplete(step.questions);" ng-click="$ctrl.nextStep();" aria-label="continue">
+          <md-button class="md-accent md-raised microToolUpdateInputs" ng-disabled="$ctrl.isSectionIncomplete(step.questions);" ng-click="$ctrl.nextStep();" aria-label="continue">
             Continue
           </md-button>
         </div>
@@ -44,11 +44,11 @@
     <div ng-repeat="question in step.questions">
       <label>Question {{question.number}}</label>
       <input
-        type="text" 
+        type="text"
         class="regInput microToolInput"
         id="{{question.dbEntity}}"
         data-dbentity="{{question.dbEntity}}"
-        data-analyticsname="{{question.analyticsName}}" 
+        data-analyticsname="{{question.analyticsName}}"
         ng-model="question.value"
         >
     </div>

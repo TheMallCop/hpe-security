@@ -3,9 +3,7 @@ window.$ = window.jQuery = jQuery;
 
 function mainstay () {
 	console.log('Mainstay is here!');
-	$( "#hpeQuestion1" ).change(function() {
-	  console.log( "Handler for .change() called from mainstay." );
-	});
+	//microTool.util.init();
 }
 export default mainstay;
 
@@ -14,7 +12,7 @@ export default mainstay;
 // 	// UTIL Object
 // 	// Desc: Contains useful utility functions.
 // 	/*************************************************************************************************/
-// 	var microTool = {}; 
+// 	var microTool = {};
 // 	microTool.util = {
 // 	    init: function (){
 // 	        if (microTool.util.IsInIframe()) {
@@ -1205,7 +1203,7 @@ export default mainstay;
 // 	** Name: convertFromNativeNumberToEnUs
 // 	** Description: this takes numbers that the user typed in to a text box, and converts them to US number format so they are ready to be sent back to the server side code
 // 	**         all server side c# code and the xls model is in US format
-// 	**--------------------------------------------------------------------------------------------------------------------------------------------------------- 
+// 	**---------------------------------------------------------------------------------------------------------------------------------------------------------
 // 	microTool.currency.convertFromNativeNumberToEnUs = function (nStr, dataFormat, noThousandsSeparator /*should almost always be false*/) {
 
 // 	    // setup the symbolArray..

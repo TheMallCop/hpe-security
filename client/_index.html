@@ -3,10 +3,15 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <base href="/">
+    <base href="/go/hpe/hpe-security/">
     <title>Information Security Assessment | Hewlett Packard Enterprise</title>
     <meta name="description" content="Take this assessment to evaluate the maturity of your IT security protocols">
     <meta name="viewport" content="width=device-width">
+    <script type="text/javascript" src="js/mainstay/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="js/mainstay/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/mainstay/jquery.json-2.3.min.js"></script>
+    <script type="text/javascript" src="js/mainstay/accounting.js"></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <!-- These values should match those in main.component.js -->
@@ -223,15 +228,9 @@
     <!--[if lt IE 9]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
       <![endif]-->
-
+    <input type="hidden" class="isAngular" value="true" />
     <div ui-view="" class="app" autoscroll="true"></div>
     <footer></footer>
-    <script type="text/javascript" src="js/mainstay/jquery-1.9.1.js"></script>
-    <script type="text/javascript" src="js/mainstay/jquery.cookie.js"></script>
-    <script type="text/javascript" src="js/mainstay/jquery.json-2.3.min.js"></script>
-    <script type="text/javascript" src="js/mainstay/main.js"></script>
-    <script type="text/javascript" src="js/mainstay/data.js"></script>
-    <script type="text/javascript" src="js/mainstay/currency.js"></script>
     <script>
         function msUpdateInputs() {
             var scope = angular.element(document.getElementById('mainCtrl')).scope();
@@ -251,5 +250,9 @@
             scope.$apply();
         }
     </script>
+
+    <script type="text/javascript" src="js/mainstay/main.js"></script>
+    <script type="text/javascript" src="js/mainstay/data.js"></script>
+    <script type="text/javascript" src="js/mainstay/currency.js"></script>
 </body>
 </html>
