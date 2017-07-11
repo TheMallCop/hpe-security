@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -194,6 +194,75 @@
                    data-analyticsname="Question 22">
         </div>
         <button id="msUpdateInputs" onclick="msUpdateInputs()">Update</button>
+    </div>
+    <div id="shadow-output" style="display:none;">
+        <div>
+            <label>Score</label>
+            <input type="text"
+                   class="regOutput microToolOutput"
+                   id="governanceScore"
+                   data-dbentity="governanceScore"
+                   data-analyticsname="Governance Score">
+        </div>
+        <div>
+            <label>Average</label>
+            <input type="text"
+                   class="regOutput microToolInput"
+                   id="governanceAvg"
+                   data-dbentity="governanceAvg"
+                   data-analyticsname="Governance Average Score">
+        </div>
+
+        <div>
+            <label>Score</label>
+            <input type="text"
+                   class="regOutput microToolOutput"
+                   id="constructionScore"
+                   data-dbentity="constructionScore"
+                   data-analyticsname="Construction Score">
+        </div>
+        <div>
+            <label>Average</label>
+            <input type="text"
+                   class="regOutput microToolInput"
+                   id="constructionAvg"
+                   data-dbentity="constructionAvg"
+                   data-analyticsname="Construction Average Score">
+        </div>
+
+        <div>
+            <label>Score</label>
+            <input type="text"
+                   class="regOutput microToolOutput"
+                   id="verificationScore"
+                   data-dbentity="verificationScore"
+                   data-analyticsname="Verification Score">
+        </div>
+        <div>
+            <label>Average</label>
+            <input type="text"
+                   class="regOutput microToolInput"
+                   id="verificationAvg"
+                   data-dbentity="verificationAvg"
+                   data-analyticsname="Verification Average Score">
+        </div>
+
+        <div>
+            <label>Score</label>
+            <input type="text"
+                   class="regOutput microToolOutput"
+                   id="deploymentScore"
+                   data-dbentity="deploymentScore"
+                   data-analyticsname="Deployment Score">
+        </div>
+        <div>
+            <label>Average</label>
+            <input type="text" class="regOutput microToolInput "
+                   id="deploymentAvg"
+                   data-dbentity="deploymentAvg"
+                   data-analyticsname="Deployment Average Score">
+        </div>
+        <button id="msUpdateOutputs" onclick="msUpdateOutputs()">Update</button>
     </div>
 
     <style>
