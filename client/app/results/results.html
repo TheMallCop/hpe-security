@@ -69,30 +69,3 @@
     </div>
   </div>
 </section>
-<div id="shadow-output" style="display:none;">
-  <div ng-repeat="result in $ctrl.results">
-    <h3>{{result.name}}</h3>
-    <div>
-      <label>Score</label>
-      <input
-        type="text" 
-        class="regOutput microToolOutput"
-        id="{{result.score.dbEntity}}"
-        data-dbentity="{{result.score.dbEntity}}"
-        data-analyticsname="{{result.score.analyticsName}}" 
-        ng-model="result.score.value"
-        >
-    </div>
-    <div>
-      <label>Average</label>
-      <input 
-        type="text" 
-        class="regOutput microToolInput"
-        id="{{result.average.dbEntity}}"
-        data-dbentity="{{result.average.dbEntity}}"
-        data-analyticsname="{{result.average.analyticsName}}" 
-        ng-model="result.average.value">
-    </div>
-  </div>
-  <button id="msUpdateOutputs" onclick="msUpdateOutputs()">Update</button>
-</div>
