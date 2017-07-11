@@ -3,7 +3,6 @@ window.$ = window.jQuery = jQuery;
 
 function mainstay () {
 	console.log('Mainstay is here!');
-	//microTool.util.init();
 }
 export default mainstay;
 
