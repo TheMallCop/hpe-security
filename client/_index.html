@@ -302,21 +302,31 @@
     <footer></footer>
     <script>
         function msUpdateInputs() {
-            var scope = angular.element(document.getElementById('mainCtrl')).scope();
-            scope.$ctrl.steps.forEach((step) => {
-                step.questions.forEach((question) => {
-                    question.value = document.getElementById(question.dbEntity).value;
-                });
-            });
-            scope.$apply();
+            var mainCtrl = document.getElementById('mainCtrl');
+            if (mainCtrl) {
+                var scope = angular.element(document.getElementById('mainCtrl')).scope();
+                if (typeof (scope.$ctrl) != "undefined") {
+                    scope.$ctrl.steps.forEach((step) => {
+                        step.questions.forEach((question) => {
+                            question.value = document.getElementById(question.dbEntity).value;
+                        });
+                    });
+                    scope.$apply();
+                }
+            }
         }
         function msUpdateOutputs() {
-            var scope = angular.element(document.getElementById('shadow-output')).scope();
-            scope.$ctrl.results.forEach((section) => {
-                section.score.value = document.getElementById(section.score.dbEntity).value;
-                section.average.value = document.getElementById(section.average.dbEntity).value;
-            });
-            scope.$apply();
+            var shadowOutput = document.getElementById('shadow-output');
+            if (shadowOutput) {
+                var scope = angular.element(document.getElementById('shadow-output')).scope();
+                if (typeof (scope.$ctrl) != "undefined") {
+                    scope.$ctrl.results.forEach((section) => {
+                        section.score.value = document.getElementById(section.score.dbEntity).value;
+                        section.average.value = document.getElementById(section.average.dbEntity).value;
+                    });
+                    scope.$apply();
+                }
+            }
         }
     </script>
 

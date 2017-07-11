@@ -10,7 +10,7 @@ export class MainController {
   }
   $onInit() {
     if (this.$state.params.reg) {
-      this.$state.go('results', {reg: true});
+      this.$state.go('results', {reg: 1});
     }
     var scrollToTop = () => {
       this.$location.hash('stepper');
