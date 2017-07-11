@@ -8,7 +8,7 @@ export class ResultsCtrl {
   }
   $onInit() {
 
-    microTool.util.init();
+    // microTool.util.init();
     
     this.results = [
       {

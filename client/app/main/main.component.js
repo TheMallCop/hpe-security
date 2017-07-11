@@ -4,13 +4,15 @@ import routing from './main.routes';
 
 export class MainController {
 
-    constructor($state, $location, $anchorScroll) {
+  constructor($state, $location, $anchorScroll) {
     this.$state = $state;
     this.$location = $location;
     this.$anchorScroll = $anchorScroll;
   }
+  
   $onInit() {
     microTool.util.init();
+
     if (this.$state.params.reg) {
       this.$state.go('results', {reg: 1});
     }
