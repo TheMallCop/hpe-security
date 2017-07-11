@@ -10,7 +10,8 @@
 </head>
 <body>
   <!-- These values should match those in main.component.js -->
-  <div id="shadow-form" style="display:none">
+  <div id="shadow-input" style="display:none">
+    <h3>Inputs</h3>
     <div>
       <label>Question 1</label>
       <input
@@ -288,7 +289,7 @@
           scope.$apply();
         }
         function msUpdateOutputs () {
-          var scope = angular.element(document.getElementById('shadow-form')).scope();
+          var scope = angular.element(document.getElementById('shadow-output')).scope();
           scope.$ctrl.results.forEach((section) => {
             section.score.value = document.getElementById(section.score.dbEntity).value;
             section.average.value = document.getElementById(section.average.dbEntity).value;

@@ -63,7 +63,7 @@
     </div>
   </div>
 </section>
-<div id="shadow-form" style="display:none;">
+<div id="shadow-output" style="display:none;">
   <div ng-repeat="result in $ctrl.results">
     <h3>{{result.name}}</h3>
     <div>
@@ -88,5 +88,5 @@
         ng-model="result.average.value">
     </div>
   </div>
-  <button id="msUpdateValues" onclick="msUpdateOutputs()">Update</button>
+  <button id="msUpdateOutputs" onclick="msUpdateOutputs()">Update</button>
 </div>
