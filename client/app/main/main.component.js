@@ -3,16 +3,21 @@ import uiRouter from 'angular-ui-router';
 import routing from './main.routes';
 
 export class MainController {
-  constructor($state, $location, $anchorScroll) {
+  constructor($state, $location, $anchorScroll, $stateParams) {
     this.$state = $state;
     this.$location = $location;
     this.$anchorScroll = $anchorScroll;
+    this.$stateParams = $stateParams;
   }
   $onInit() {
     var scrollToTop = () => {
       this.$location.hash('stepper');
       this.$anchorScroll();
     };
+    console.log('Params', this.$stateParams);
+    if (this.$stateParams.reg) {
+      this.$state.go('results');
+    }
     this.steps = [
       {
         label: 'A',
@@ -194,7 +199,7 @@ export class MainController {
   }
 }
 
-MainController.$inject = ['$state', '$location', '$anchorScroll'];
+MainController.$inject = ['$state', '$location', '$anchorScroll', '$stateParams'];
 
 export default angular.module('hpeSecurityApp.main', [uiRouter])
   .config(routing)
