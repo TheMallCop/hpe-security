@@ -40,6 +40,4 @@ angular.element(document)
     angular.bootstrap(document, ['hpeSecurityApp'], {
       strictDi: true
     });
-
-    //microTool.util.init();
   });

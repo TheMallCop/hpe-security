@@ -1,27 +1,27 @@
 'use strict';
 
-export function routeConfig($urlRouterProvider, $locationProvider, $mdThemingProvider) {
-  'ngInject';
+export function routeConfig($stateProvider, $urlRouterProvider, $locationProvider, $mdThemingProvider) {
+    'ngInject';
 
-  $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/');
 
-  $locationProvider.html5Mode(true);
+    $locationProvider.html5Mode(true);
 
-  var hpeAccentMap = $mdThemingProvider.extendPalette('green', {
-    'A200': '01A982',
-    'A700': '1BB18E',
-    'contrastDefaultColor': 'light'
-  });
+    var hpeAccentMap = $mdThemingProvider.extendPalette('green', {
+        'A200': '01A982',
+        'A700': '1BB18E',
+        'contrastDefaultColor': 'light'
+    });
 
-  $mdThemingProvider.definePalette('hpeAccentColor', hpeAccentMap);
+    $mdThemingProvider.definePalette('hpeAccentColor', hpeAccentMap);
 
-  $mdThemingProvider.theme('default')
-    .primaryPalette('purple')
-    .accentPalette('hpeAccentColor');
+    $mdThemingProvider.theme('default')
+      .primaryPalette('purple')
+      .accentPalette('hpeAccentColor');
 }
 
 export function mainstayConfig ($rootScope) {
-  'ngInject';
+    'ngInject';
 
-  $rootScope.mainstayConfig = microTool.util;
+    $rootScope.mainstayConfig = microTool.util;
 }
