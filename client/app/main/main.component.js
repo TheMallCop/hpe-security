@@ -14,7 +14,10 @@ export class MainController {
       this.$state.go('results', {reg: 1});
     }
     var scrollToTop = () => {
-      this.$anchorScroll();
+        var old = this.$location.hash();
+        this.$location.hash('stepper');
+        this.$anchorScroll();
+        this.$location.hash(old);
     };
     this.steps = [
       {
