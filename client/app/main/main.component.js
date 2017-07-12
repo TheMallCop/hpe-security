@@ -8,10 +8,11 @@ export class MainController {
     this.$state = $state;
     this.$location = $location;
     this.$anchorScroll = $anchorScroll;
+    this.$rootScope = $rootScope;
   }
   
   $onInit() {
-    microTool.util.init();
+    this.$rootScope.mainstayConfig.init();
 
     if (this.$state.params.reg) {
       this.$state.go('results', {reg: 1});
@@ -162,47 +163,10 @@ export class MainController {
         }]
       }
     ];
-    this.nextStep = () => {
-      var nextStep = false;
-      this.steps.forEach((step, index) => {
-        if (step.active && !nextStep) {
-          if (index === this.steps.length -1) {
-            this.$state.go('results');
-            return;
-          }
-          step.active = false;
-          step.complete = true;
-          nextStep = index + 1;
-          this.steps[nextStep].active = true;
-        }
-      })
-      scrollToTop();
-    };
-    this.previousStep = () => {
-      var previousStep = false;
-      this.steps.forEach((step, index) => {
-        if (step.active && !previousStep) {
-          step.active = false;
-          previousStep = index - 1;
-          this.steps[previousStep].active = true;
-          this.steps[previousStep].complete = false;
-        }
-      })
-      scrollToTop();
-    };
-    this.isSectionIncomplete = (questions) => {
-      var isIncomplete = false;
-      questions.forEach((question) => {
-        if (!question.value) {
-          isIncomplete = true;
-        }
-      });
-      return isIncomplete;
-    };
   }
 }
 
-MainController.$inject = ['$state', '$location', '$anchorScroll'];
+MainController.$inject = ['$state', '$location', '$anchorScroll', '$rootScope'];
 
 export default angular.module('hpeSecurityApp.main', [uiRouter])
   .config(routing)

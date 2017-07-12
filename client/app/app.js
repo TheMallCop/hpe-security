@@ -31,12 +31,12 @@ angular.module('hpeSecurityApp', [ngCookies, ngResource, ngSanitize,
 	main, results, header, footer, question,
 	stepper, step, horizontalStepper, horizontalStep,
 ])
-  .config(routeConfig);
+  .config(routeConfig)
+  .run(mainstayConfig);
 
 angular.element(document)
   .ready(() => {
     angular.bootstrap(document, ['hpeSecurityApp'], {
       strictDi: true
     });
-    // microTool.util.init();
   });
