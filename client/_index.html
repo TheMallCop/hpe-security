@@ -200,7 +200,7 @@
         <div>
             <label>Score</label>
             <input type="text"
-                   class="regOutput microToolOutput"
+                   class="regInput microToolInput"
                    id="governanceScore"
                    data-dbentity="governanceScore"
                    data-analyticsname="Governance Score">
@@ -208,7 +208,7 @@
         <div>
             <label>Average</label>
             <input type="text"
-                   class="regOutput microToolInput"
+                   class="regInput microToolInput"
                    id="governanceAvg"
                    data-dbentity="governanceAvg"
                    data-analyticsname="Governance Average Score">
@@ -217,7 +217,7 @@
         <div>
             <label>Score</label>
             <input type="text"
-                   class="regOutput microToolOutput"
+                   class="regInput microToolInput"
                    id="constructionScore"
                    data-dbentity="constructionScore"
                    data-analyticsname="Construction Score">
@@ -225,7 +225,7 @@
         <div>
             <label>Average</label>
             <input type="text"
-                   class="regOutput microToolInput"
+                   class="regInput microToolInput"
                    id="constructionAvg"
                    data-dbentity="constructionAvg"
                    data-analyticsname="Construction Average Score">
@@ -234,7 +234,7 @@
         <div>
             <label>Score</label>
             <input type="text"
-                   class="regOutput microToolOutput"
+                   class="regInput microToolInput"
                    id="verificationScore"
                    data-dbentity="verificationScore"
                    data-analyticsname="Verification Score">
@@ -242,7 +242,7 @@
         <div>
             <label>Average</label>
             <input type="text"
-                   class="regOutput microToolInput"
+                   class="regInput microToolInput"
                    id="verificationAvg"
                    data-dbentity="verificationAvg"
                    data-analyticsname="Verification Average Score">
@@ -251,14 +251,14 @@
         <div>
             <label>Score</label>
             <input type="text"
-                   class="regOutput microToolOutput"
+                   class="regInput microToolInput"
                    id="deploymentScore"
                    data-dbentity="deploymentScore"
                    data-analyticsname="Deployment Score">
         </div>
         <div>
             <label>Average</label>
-            <input type="text" class="regOutput microToolInput "
+            <input type="text" class="regInput microToolInput "
                    id="deploymentAvg"
                    data-dbentity="deploymentAvg"
                    data-analyticsname="Deployment Average Score">
@@ -306,26 +306,24 @@
             var mainCtrl = document.getElementById('mainCtrl');
             if (mainCtrl) {
                 var scope = angular.element(document.getElementById('mainCtrl')).scope();
-                if (typeof (scope.$ctrl) != "undefined") {
+                if (typeof (scope) != "undefined" && typeof (scope.$ctrl) != "undefined") {
                     scope.$ctrl.steps.forEach((step) => {
                         step.questions.forEach((question) => {
                             question.value = document.getElementById(question.dbEntity).value;
                         });
                     });
-                    scope.$apply();
                 }
             }
         }
         function msUpdateOutputs() {
             var shadowOutput = document.getElementById('shadow-output');
             if (shadowOutput) {
-                var scope = angular.element(document.getElementById('shadow-output')).scope();
-                if (typeof (scope.$ctrl) != "undefined") {
+                var scope = angular.element(document.getElementById('resultsController')).scope();
+                if (typeof (scope) != "undefined" && typeof (scope.$ctrl) != "undefined") {
                     scope.$ctrl.results.forEach((section) => {
                         section.score.value = document.getElementById(section.score.dbEntity).value;
                         section.average.value = document.getElementById(section.average.dbEntity).value;
                     });
-                    scope.$apply();
                 }
             }
         }

@@ -9,6 +9,7 @@ import uiRouter from 'angular-ui-router';
 // import ngMessages from 'angular-messages';
 import ngMaterial from 'angular-material';
 import {routeConfig} from './app.config';
+import {mainstayConfig} from './app.config';
 
 import main from './main/main.component';
 import results from './results/results.component';
@@ -39,4 +40,6 @@ angular.element(document)
     angular.bootstrap(document, ['hpeSecurityApp'], {
       strictDi: true
     });
+
+    //microTool.util.init();
   });

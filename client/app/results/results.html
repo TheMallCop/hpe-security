@@ -8,35 +8,35 @@
     <md-button class="md-raised md-accent microToolDownloadButton">Download</md-button>
   </div>
 </section>
-<section class="hpe-container">
-  <h2>Result summary</h2>
-  <p>Etiam eleifend erat ligula. Duis interdum mauris ac elit egestas, quis mattis nisi lacinia.</p>
-  <div class="results-breakdown">
-    <div class="results-breakdown__section" ng-repeat="result in $ctrl.results">
-      <h3>{{result.name}}</h3>
-      <div layout-gt-sm="row" layout="column">
-        <div flex="40">
-          <p class="regOutput microToolInput" ng-attr-data-dbentity="{{result.name + 'Description'}}">Summary results indicate a relatively new maturity level when it comes to the focus area of Strategy and Metrics.</p>
+<section class="hpe-container" id="resultsController">
+    <h2>Result summary</h2>
+    <p>Etiam eleifend erat ligula. Duis interdum mauris ac elit egestas, quis mattis nisi lacinia.</p>
+    <div class="results-breakdown">
+        <div class="results-breakdown__section" ng-repeat="result in $ctrl.results">
+            <h3>{{result.name}}</h3>
+            <div layout-gt-sm="row" layout="column">
+                <div flex="40">
+                    <p class="regOutput microToolInput" ng-attr-data-dbentity="{{result.name + 'Description'}}">Summary results indicate a relatively new maturity level when it comes to the focus area of Strategy and Metrics.</p>
+                </div>
+                <div flex flex-gt-sm="40" flex-offset-gt-sm="10" class="hpe-slider">
+                    <div class="hpe-slider__score-thumb" ng-attr-style="{{$ctrl.getAvgOffset(result.score.value)}}">
+                        <span class="hpe-slider__benchmark-thumb__text">{{result.score.value}}</span>
+                    </div>
+                    <div class="hpe-slider__benchmark-thumb" ng-attr-style="{{$ctrl.getAvgOffset(result.average.value)}}">
+                        <span class="hpe-slider__benchmark-thumb__text">avg</span>
+                    </div>
+                    <md-slider-container>
+                        <md-slider ng-model="result.score.value" step="1" max="10" aria-label="Governance" ng-readonly="true" ng-disabled="true"></md-slider>
+                    </md-slider-container>
+                    <div class="hpe-slider__label" layout="row" layout-align="space-between">
+                        <div class="hpe-slider__label__min" flex>Less mature</div>
+                        <div class="hpe-slider__label__max" flex>More mature</div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div flex flex-gt-sm="40" flex-offset-gt-sm="10" class="hpe-slider">
-          <div class="hpe-slider__score-thumb" ng-attr-style="{{$ctrl.getAvgOffset(result.score.value)}}">
-            <span class="hpe-slider__benchmark-thumb__text">{{result.score.value}}</span>
-          </div>
-          <div class="hpe-slider__benchmark-thumb" ng-attr-style="{{$ctrl.getAvgOffset(result.average.value)}}">
-            <span class="hpe-slider__benchmark-thumb__text">avg</span>
-          </div>
-          <md-slider-container>
-            <md-slider ng-model="result.score.value" step="1" max="10" aria-label="Governance" ng-readonly="true" ng-disabled="true"></md-slider>
-          </md-slider-container>
-          <div class="hpe-slider__label" layout="row" layout-align="space-between">
-            <div class="hpe-slider__label__min" flex>Less mature</div>
-            <div class="hpe-slider__label__max" flex>More mature</div>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
-  <md-button ui-sref="main"><i class="fa fa-chevron-left hpe-icon hpe-icon--button"></i> Edit answers</md-button>
+    <md-button ui-sref="main"><i class="fa fa-chevron-left hpe-icon hpe-icon--button"></i> Edit answers</md-button>
 </section>
 <section class="hpe-cta">
   <div class="hpe-cta__slant"></div>
