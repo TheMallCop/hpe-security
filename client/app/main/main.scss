@@ -28,6 +28,16 @@ $rule: thin solid $palette--light-gray;
     transition: $target $duration cubic-bezier(0.755, 0.05, 0.855, 0.06), $target2 $duration2 cubic-bezier(0.755, 0.05, 0.855, 0.06);
   }
 }
+
+// Helpers
+
+// Target IE 10+
+@mixin if-ie {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @content;
+  }
+}
+
 .slide {
   &--off {
     @include quint-ease-out(transform, 400ms);
@@ -35,6 +45,19 @@ $rule: thin solid $palette--light-gray;
   }
   &--on {
     transform: translateX(100%);
+  }
+}
+.truncate {
+  max-width: 260px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  @include if-ie {
+    overflow: visible;
+    display: block;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 }
 
